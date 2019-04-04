@@ -6,6 +6,7 @@
     - [Sales Order](./transaksi/sales-order.md)
         - [Penjelasan](./transaksi/sales-order/penjelasan.md)
         - [Membuat Sales Order](./transaksi/sales-order/membuat.md)
+            - [Membuat Sales Order Line](./transaksi/sales-order/membuat-line.md)
         - [Mengkonfirmasi Sales Order](./transaksi/sales-order/konfirmasi.md)
 - [Konfigurasi](./konfigurasi.md)
     - [Sales Order Type](./konfigurasi/sales-order-type.md)
