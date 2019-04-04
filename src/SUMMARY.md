@@ -8,6 +8,8 @@
         - [Membuat Sales Order](./transaksi/sales-order/membuat.md)
             - [Membuat Sales Order Line](./transaksi/sales-order/membuat-line.md)
         - [Mengkonfirmasi Sales Order](./transaksi/sales-order/konfirmasi.md)
+        - [Membatalkan Sales Order](./transaksi/sales-order/batal.md)
+        - [Merestart Sales Order](./transaksi/sales-order/restart.md)
 - [Konfigurasi](./konfigurasi.md)
     - [Sales Order Type](./konfigurasi/sales-order-type.md)
     - [Sales Order Cancel Reason](./konfigurasi/sales-order-cancel-reason.md)

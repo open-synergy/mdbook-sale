@@ -41,3 +41,5 @@
 ## C. OUTPUT
 
 * Sales order akan tersimpan dengan status **Draft Quotation**
+
+![](../../img/sales-order/status-draft-quotation.png)

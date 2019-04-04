@@ -15,9 +15,12 @@ pada menu yang dimaksud.
 2. Buka data sales order yang akan dikonfirmasi. Abaikan jika data sudah dibuka.
 3. Klik tombol **Confirm Sale** pada bagian atas-kiri form.
 
-![](../../img/sales-order/tombol-confirm.png)
+![](../../img/sales-order/tombol-confirm-sale.png)
 
 ## C. OUTPUT
 
 * Status dari sales order akan berubah menjadi **Sales Order**
-* Isian bank payment sudah tidak bisa diubah
+
+![](../../img/sales-order/status-sales-order.png)
+
+* Isian sales order sudah tidak bisa diubah
