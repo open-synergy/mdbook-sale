@@ -7,6 +7,7 @@
         - [Penjelasan](./transaksi/sales-order/penjelasan.md)
         - [Membuat Sales Order](./transaksi/sales-order/membuat.md)
             - [Membuat Sales Order Line](./transaksi/sales-order/membuat-line.md)
+        - [Mengirimkan Sales Order Via Email](./transaksi/sales-order/kirim-email.md)
         - [Mengkonfirmasi Sales Order](./transaksi/sales-order/konfirmasi.md)
         - [Membatalkan Sales Order](./transaksi/sales-order/batal.md)
         - [Merestart Sales Order](./transaksi/sales-order/restart.md)
