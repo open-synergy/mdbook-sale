@@ -1,6 +1,14 @@
 # Membuat Sales Order Line
 
-1. Klik tombol **Add an Item** pada tabel **Order Lines**
+*(Instruksi kerja ini merupakan sub instruksi dari (1) [Membuat Sale Order](./membuat.md), atau (2) [Memodifikasi Sale Order](./modifikasi.md). Instruksi kerja ini tidak bisa berdiri sendiri)*
+
+## A. INPUT
+
+*(Tidak ada instruksi khusus)*
+
+## B. INSTRUKSI KERJA
+
+1. <a name="l1">Klik</a> tombol **Add an Item** pada tabel **Order Lines**
 
 ![](../../img/sales-order/tombol-add-item.png)
 
@@ -28,7 +36,7 @@ Pop-up **Order Lines** akan muncul
 19. Isi **Description**. Harus diisi.
 20. Aktifkan **Manually Sourced** jika dibutuhkan. Tidak harus diisi.
 21. Pilih **Sourced by**. Tidak harus diisi.
-22. Klik tombol **Save & Close** atau **Save & New** untuk menyimpan data. Ulangi [lngkah ke-2](#l2) apabila **Save & New** yang dipilih. Lanjutkan ke prosedur [Membuat Sales Order langkah ke-28](./membuat.md#l28) apabila **Save & Close** yang dipilih.
+22. Klik tombol **Save & Close** atau **Save & New** untuk menyimpan data. Ulangi [lngkah ke-1](#l1) apabila **Save & New** yang dipilih. Lanjutkan ke [langkah ke-27 instruksi kerja Membuat Sales Order](./membuat.md#l27) atau [langkah ke-28 instruksi kerja Memodifikasi Sales Order](./modifikasi.md#l28) apabila **Save & Close** yang dipilih.
 
 Tombol **Save & Close**
 

@@ -2,6 +2,8 @@
 
 ## A. INPUT
 
+*(Tidak ada instruksi khusus)*
+
 ## B. LANGKAH KERJA
 
 1. Buka menu **Sales -> Sales -> All Orders**.
@@ -33,7 +35,7 @@
 24. Pilih **Payment Term**. Tidak harus diisi.
 25. Isi **Requested Date**. Tidak harus diisi.
 26. Buka tab **Order Lines**.
-27. Untuk setiap produk yang dijual lakukan prosedur [Pembuatan Order Line](./membuat-line.md).
+27. <a name="l27">[Tambah](./membuat-line.md)/[Modifikasi](./modifikasi-line.md)/[Hapus](./meghapus-line.md)</a> **Order Lines**. Ulangi sampai **Order Lines** sesuai dengan keingnan.
 28. <a name="l28">Klik</a> tombol **Save** pada bagian atas-kiri form.
 
 ![](../../img/sales-order/tombol-save.png)
