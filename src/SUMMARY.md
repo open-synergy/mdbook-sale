@@ -18,4 +18,8 @@
         - [Merestart Sales Order](./transaksi/sales-order/restart.md)
 - [Konfigurasi](./konfigurasi.md)
     - [Sales Order Type](./konfigurasi/sales-order-type.md)
+        - [Penjelasan Sales Order Type](./konfigurasi/sales-order-type/penjelasan.md)
+        - [Membuat Sales Order Type](./konfigurasi/sales-order-type/membuat.md)
     - [Sales Order Cancel Reason](./konfigurasi/sales-order-cancel-reason.md)
+        - [Penjelasan Sales Order Cancel Reason](./konfigurasi/sales-order-cancel-reason/penjelasan.md)
+        - [Membuat Sales Order Cancel Reason](./konfigurasi/sales-order-cancel-reason/membuat.md)
