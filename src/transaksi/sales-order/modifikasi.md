@@ -10,7 +10,7 @@
 
 1. Buka menu **Sales -> Sales -> All Orders**. Abaikan jika sudah berada pada menu yang dimaksud.
 2. Buka data sales order yang akan dimodifikasi. Abaikan jika data sudah dibuka.
-3. Klik tombol **Edit** pada bagian atas-kanan form.
+3. <a name="l3">Klik</a> tombol **Edit** pada bagian atas-kanan form.
 
 ![](../../img/sales-order/tombol-edit.png)
 
