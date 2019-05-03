@@ -5,6 +5,7 @@
 - [Transaksi](./transaksi.md)
     - [Sales Order](./transaksi/sales-order.md)
         - [Penjelasan](./transaksi/sales-order/penjelasan.md)
+            - [Penjelasan Detail Order Lines](./transaksi/sales-order/penjelasan-detail-order-lines.md)
         - [Membuat Sales Order](./transaksi/sales-order/membuat.md)
         - [Memodifikasi Sales Order](./transaksi/sales-order/modifikasi.md)
         - [Menghapus Sales Order](./transaksi/sales-order/menghapus.md)
