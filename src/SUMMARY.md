@@ -25,6 +25,7 @@
         - [Membuat Quotation Dari Opportunity](./transaksi/opportunity/membuat-quotation.md)
         - [Menandai Opportunity Sebagai Menang](./transaksi/opportunity/menandai-menang.md)
         - [Menandai Opportunity Sebagai Kalah](./transaksi/opportunity/menandai-kalah.md)
+        - [Membuat Master Project Dari Opportunity](./transaksi/opportunity/membuat-master-project.md)
 - [Konfigurasi](./konfigurasi.md)
     - [Sales Order Type](./konfigurasi/sales-order-type.md)
         - [Penjelasan Sales Order Type](./konfigurasi/sales-order-type/penjelasan.md)
