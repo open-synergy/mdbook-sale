@@ -1,0 +1,992 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Odoo - Sales Management</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="prakata.html">Pra-Kata</a></li><li class="affix"><a href="terminologi.html">Terminologi</a></li><li><a href="transaksi.html"><strong aria-hidden="true">1.</strong> Transaksi</a></li><li><ol class="section"><li><a href="transaksi/sales-order.html"><strong aria-hidden="true">1.1.</strong> Sales Order</a></li><li><ol class="section"><li><a href="transaksi/sales-order/penjelasan.html"><strong aria-hidden="true">1.1.1.</strong> Penjelasan</a></li><li><ol class="section"><li><a href="transaksi/sales-order/penjelasan-detail-order-lines.html"><strong aria-hidden="true">1.1.1.1.</strong> Penjelasan Detail Order Lines</a></li></ol></li><li><a href="transaksi/sales-order/membuat.html"><strong aria-hidden="true">1.1.2.</strong> Membuat Sales Order</a></li><li><a href="transaksi/sales-order/modifikasi.html"><strong aria-hidden="true">1.1.3.</strong> Memodifikasi Sales Order</a></li><li><a href="transaksi/sales-order/menghapus.html"><strong aria-hidden="true">1.1.4.</strong> Menghapus Sales Order</a></li><li><a href="transaksi/sales-order/membuat-line.html"><strong aria-hidden="true">1.1.5.</strong> Membuat Sales Order Line</a></li><li><a href="transaksi/sales-order/modifikasi-line.html"><strong aria-hidden="true">1.1.6.</strong> Memodifikasi Sales Order Line</a></li><li><a href="transaksi/sales-order/menghapus-line.html"><strong aria-hidden="true">1.1.7.</strong> Menghapus Sales Order Line</a></li><li><a href="transaksi/sales-order/kirim-email.html"><strong aria-hidden="true">1.1.8.</strong> Mengirimkan Sales Order Via Email</a></li><li><a href="transaksi/sales-order/konfirmasi.html"><strong aria-hidden="true">1.1.9.</strong> Mengkonfirmasi Sales Order</a></li><li><a href="transaksi/sales-order/batal.html"><strong aria-hidden="true">1.1.10.</strong> Membatalkan Sales Order</a></li><li><a href="transaksi/sales-order/restart.html"><strong aria-hidden="true">1.1.11.</strong> Merestart Sales Order</a></li></ol></li><li><a href="transaksi/opportunity.html"><strong aria-hidden="true">1.2.</strong> Opportunity</a></li><li><ol class="section"><li><a href="transaksi/opportunity/penjelasan.html"><strong aria-hidden="true">1.2.1.</strong> Penjelasan</a></li><li><a href="transaksi/opportunity/membuat.html"><strong aria-hidden="true">1.2.2.</strong> Membuat Opportunity</a></li><li><a href="transaksi/opportunity/memodifikasi.html"><strong aria-hidden="true">1.2.3.</strong> Memodifikasi Opportunity</a></li><li><a href="transaksi/opportunity/menghapus.html"><strong aria-hidden="true">1.2.4.</strong> Menghapus Opportunity</a></li><li><a href="transaksi/opportunity/memindahkan-stage.html"><strong aria-hidden="true">1.2.5.</strong> Memindahkan Stage Opportunity</a></li><li><a href="transaksi/opportunity/membuat-quotation.html"><strong aria-hidden="true">1.2.6.</strong> Membuat Quotation Dari Opportunity</a></li><li><a href="transaksi/opportunity/menandai-menang.html"><strong aria-hidden="true">1.2.7.</strong> Menandai Opportunity Sebagai Menang</a></li><li><a href="transaksi/opportunity/menandai-kalah.html"><strong aria-hidden="true">1.2.8.</strong> Menandai Opportunity Sebagai Kalah</a></li><li><a href="transaksi/opportunity/membuat-master-project.html"><strong aria-hidden="true">1.2.9.</strong> Membuat Master Project Dari Opportunity</a></li></ol></li></ol></li><li><a href="konfigurasi.html"><strong aria-hidden="true">2.</strong> Konfigurasi</a></li><li><ol class="section"><li><a href="konfigurasi/sales-order-type.html"><strong aria-hidden="true">2.1.</strong> Sales Order Type</a></li><li><ol class="section"><li><a href="konfigurasi/sales-order-type/penjelasan.html"><strong aria-hidden="true">2.1.1.</strong> Penjelasan Sales Order Type</a></li><li><a href="konfigurasi/sales-order-type/membuat.html"><strong aria-hidden="true">2.1.2.</strong> Membuat Sales Order Type</a></li></ol></li><li><a href="konfigurasi/sales-order-cancel-reason.html"><strong aria-hidden="true">2.2.</strong> Sales Order Cancel Reason</a></li><li><ol class="section"><li><a href="konfigurasi/sales-order-cancel-reason/penjelasan.html"><strong aria-hidden="true">2.2.1.</strong> Penjelasan Sales Order Cancel Reason</a></li><li><a href="konfigurasi/sales-order-cancel-reason/membuat.html"><strong aria-hidden="true">2.2.2.</strong> Membuat Sales Order Cancel Reason</a></li></ol></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Odoo - Sales Management</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#pra-kata" id="pra-kata"><h1>Pra-Kata</h1></a>
+<a class="header" href="#terminologi" id="terminologi"><h1>Terminologi</h1></a>
+<a class="header" href="#transaksi" id="transaksi"><h1>Transaksi</h1></a>
+<a class="header" href="#sales-order" id="sales-order"><h1>Sales Order</h1></a>
+<ul>
+<li><a href="transaksi/./sales-order/penjelasan.html">Penjelasan</a></li>
+<li><a href="transaksi/./sales-order/membuat.html">Membuat Sales Order</a></li>
+<li><a href="transaksi/./sales-order/modifikasi.html">Memodifikasi Sales Order</a></li>
+<li><a href="transaksi/./sales-order/menghapus.html">Menghapus Sales Order</a></li>
+<li><a href="transaksi/./sales-order/membuat-line.html">Membuat Sales Order Line</a></li>
+<li><a href="transaksi/./sales-order/modifikasi-line.html">Memodifikasi Sales Order Line</a></li>
+<li><a href="transaksi/./sales-order/menghapus-line.html">Menghapus Sales Order Line</a></li>
+<li><a href="transaksi/./sales-order/kirim-email.html">Mengirimkan Sales Order Via Email</a></li>
+<li><a href="transaksi/./sales-order/konfirmasi.html">Mengkonfirmasi Sales Order</a></li>
+<li><a href="transaksi/./sales-order/batal.html">Membatalkan Sales Order</a></li>
+<li><a href="transaksi/./sales-order/restart.html">Merestart Sales Order</a></li>
+</ul>
+<a class="header" href="#penjelasan" id="penjelasan"><h1>Penjelasan</h1></a>
+<ul>
+<li><a href="#header">Header</a></li>
+<li><a href="#tab-order-lines">Tab Order Lines</a></li>
+<li><a href="#tab-other-information">Tab Other Information</a></li>
+<li><a href="#tab-revision">Tab Revision</a></li>
+<li><a href="#tab-policy">Tab Policy</a></li>
+</ul>
+<a class="header" href="#a-nameheaderheadera" id="a-nameheaderheadera"><h2><a name="header">HEADER</a></h2></a>
+<p><img src="../../img/sales-order/penjelasan-header.png" alt="" /></p>
+<a class="header" href="#a-namefield-number-orderquotation-a" id="a-namefield-number-orderquotation-a"><h4><a name="field-number"># Order(<em>Quotation /</em>)</a></h4></a>
+<p>Mendefinisikan nomor <em>Sales Order</em>. Penomoran akan diisi otomatis oleh odoo ketika data disimpan</p>
+<a class="header" href="#a-namefield-customercustomera" id="a-namefield-customercustomera"><h4><a name="field-customer">Customer</a></h4></a>
+<p>Mendefinisikan konsumen</p>
+<a class="header" href="#a-namefield-invoice-addressinvoice-addressa" id="a-namefield-invoice-addressinvoice-addressa"><h4><a name="field-invoice-address">Invoice Address</a></h4></a>
+<p>Mendefinisikan alamat konsumen yang akan dijadikan sebagai tujuan pengiriman <em>Invoice</em></p>
+<a class="header" href="#a-namefield-consigneeconsigneea" id="a-namefield-consigneeconsigneea"><h4><a name="field-consignee">Consignee</a></h4></a>
+<p>Mendefinisikan orang yang akan menerima barang</p>
+<a class="header" href="#a-namefield-delivery-addressdelivery-addressa" id="a-namefield-delivery-addressdelivery-addressa"><h4><a name="field-delivery-address">Delivery Address</a></h4></a>
+<p>Mendefinisikan alamat konsumen yang akan dijadikan sebagai tujuan pengiriman barang</p>
+<a class="header" href="#a-namefield-analyticcontract--analytica" id="a-namefield-analyticcontract--analytica"><h4><a name="field-analytic">Contract / Analytic</a></h4></a>
+<p>Mendefinisikan kontrak atau akun analitik terkait <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-datedatea" id="a-namefield-datedatea"><h4><a name="field-date">Date</a></h4></a>
+<p>Mendefinisikan tanggal <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-validvalid-untila" id="a-namefield-validvalid-untila"><h4><a name="field-valid">Valid Until</a></h4></a>
+<p>Mendefinisikan tanggal masa berlaku habisnya <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-ref-descreferencedescriptiona" id="a-namefield-ref-descreferencedescriptiona"><h4><a name="field-ref-desc">Reference/Description</a></h4></a>
+<p>Nomor referensi atau deskripsi terkait <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-warehousedefault-warehousea" id="a-namefield-warehousedefault-warehousea"><h4><a name="field-warehouse">Default Warehouse</a></h4></a>
+<p>Mendefinisikan gudang yang akan mengeluarkan barang</p>
+<a class="header" href="#a-namefield-pricelistpricelista" id="a-namefield-pricelistpricelista"><h4><a name="field-pricelist">Pricelist</a></h4></a>
+<p>Mendefinisikan <em>Pricelist</em></p>
+<a class="header" href="#a-namefield-typetypea" id="a-namefield-typetypea"><h4><a name="field-type">Type</a></h4></a>
+<p>Mendefinisikan tipe <em>Sales Order</em></p>
+<a class="header" href="#a-nametab-order-linestab-order-linesa" id="a-nametab-order-linestab-order-linesa"><h2><a name="tab-order-lines">TAB ORDER LINES</a></h2></a>
+<p><img src="../../img/sales-order/penjelasan-tab-order-lines.png" alt="" /></p>
+<p>Penjelasan lengkap mengenai detail <em>Order Lines</em> diatas dapat dilihat pada dokumentasi <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html">Penjelasan Detail Order Lines</a></strong></p>
+<p><img src="../../img/sales-order/penjelasan-tab-order-lines-2.png" alt="" /></p>
+<a class="header" href="#a-namefield-delivery-methoddelivery-methoda" id="a-namefield-delivery-methoddelivery-methoda"><h4><a name="field-delivery-method">Delivery Method</a></h4></a>
+<p>Metode pengiriman yang akan digunakan</p>
+<a class="header" href="#a-namefield-term-conditionterms-and-conditionsa" id="a-namefield-term-conditionterms-and-conditionsa"><h4><a name="field-term-condition">Terms and conditions</a></h4></a>
+<p>Mendefinisikan syarat dan ketentuan yang berlaku terkait <em>Sales Order</em></p>
+<a class="header" href="#a-nametab-other-informationtab-other-informationa" id="a-nametab-other-informationtab-other-informationa"><h2><a name="tab-other-information">TAB OTHER INFORMATION</a></h2></a>
+<p><img src="../../img/sales-order/penjelasan-tab-other-information-1.png" alt="" /></p>
+<a class="header" href="#a-namefield-incotermincoterma" id="a-namefield-incotermincoterma"><h4><a name="field-incoterm">Incoterm</a></h4></a>
+<blockquote>
+<p><strong>Catatan:</strong> (Inggris: <em>International Commercial Terms</em> number disingkat Incoterm)</p>
+</blockquote>
+<p>Mendefinisikan <em>Incoterm</em> terkait <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-shipping-policyshipping-policya" id="a-namefield-shipping-policyshipping-policya"><h4><a name="field-shipping-policy">Shipping Policy</a></h4></a>
+<p>Medefiniskan kebijakan pengiriman barang. Pilihan ini terbagi atas 2 pilihan, yaitu: <br/></p>
+<ul>
+<li><strong>Deliver each product when available</strong></li>
+<li><strong>Deliver all product at once</strong></li>
+</ul>
+<a class="header" href="#a-namefield-create-invoicecreate-invoicea" id="a-namefield-create-invoicecreate-invoicea"><h4><a name="field-create-invoice">Create Invoice</a></h4></a>
+<p>Medefiniskan pembuatan <em>Invoice</em>. Pilihan ini terbagi atas 3 pilihan, yaitu: <br/></p>
+<ul>
+<li><strong>On Demand:</strong> Invoice akan dibuat berdasarkan permintaan</li>
+<li><strong>On Delivery Order:</strong> Invoice akan dibuat pada saat pengiriman</li>
+<li><strong>Before Delivery:</strong> Invoice akan dibuat sebelum pengiriman</li>
+</ul>
+<p><img src="../../img/sales-order/penjelasan-tab-other-information-2.png" alt="" /></p>
+<a class="header" href="#a-namefield-salespersonsalespersona" id="a-namefield-salespersonsalespersona"><h4><a name="field-salesperson">Salesperson</a></h4></a>
+<p>Mendefinisikan <em>Sales Person</em></p>
+<a class="header" href="#a-namefield-tagstagsa" id="a-namefield-tagstagsa"><h4><a name="field-tags">Tags</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namefield-operating-unitoperating-unita" id="a-namefield-operating-unitoperating-unita"><h4><a name="field-operating-unit">Operating Unit</a></h4></a>
+<blockquote>
+<p><strong>Catatan:</strong> Isian ini hanya untuk user yang memiliki group <strong>Multi Operating Unit</strong></p>
+</blockquote>
+<p>Mendefinisikan operating unit untuk <em>Sales Order</em>.</p>
+<a class="header" href="#a-namefield-sales-teamsales-teama" id="a-namefield-sales-teamsales-teama"><h4><a name="field-sales-team">Sales Team</a></h4></a>
+<p>Mendefinisikan <em>Sales Team</em></p>
+<a class="header" href="#a-namefield-source-documentsource-documenta" id="a-namefield-source-documentsource-documenta"><h4><a name="field-source-document">Source Document</a></h4></a>
+<p>Mendefinisikan dokumen terkait <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-campaigncampaigna" id="a-namefield-campaigncampaigna"><h4><a name="field-campaign">Campaign</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namefield-channelchannela" id="a-namefield-channelchannela"><h4><a name="field-channel">Channel</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namefield-sourcesourcea" id="a-namefield-sourcesourcea"><h4><a name="field-source">Source</a></h4></a>
+<p>#TODO</p>
+<p><img src="../../img/sales-order/penjelasan-tab-other-information-3.png" alt="" /></p>
+<a class="header" href="#a-namefield-payment-termpayment-terma" id="a-namefield-payment-termpayment-terma"><h4><a name="field-payment-term">Payment Term</a></h4></a>
+<p>Mendefinisikan ketentuan pembayaran</p>
+<a class="header" href="#a-namefield-fiscal-positionfiscal-positiona" id="a-namefield-fiscal-positionfiscal-positiona"><h4><a name="field-fiscal-position">Fiscal Position</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namefield-invoice-amountinvoice-amounta" id="a-namefield-invoice-amountinvoice-amounta"><h4><a name="field-invoice-amount">Invoice Amount</a></h4></a>
+<p>Menginformasikan total harga <em>Invoice</em></p>
+<a class="header" href="#a-namefield-invoice-pending-amountinvoice-pending-amounta" id="a-namefield-invoice-pending-amountinvoice-pending-amounta"><h4><a name="field-invoice-pending-amount">Invoice Pending Amount</a></h4></a>
+<p>Menginformasikan total harga <em>Invoice</em> yang tertunda</p>
+<a class="header" href="#a-namefield-companycompanya" id="a-namefield-companycompanya"><h4><a name="field-company">Company</a></h4></a>
+<p>Mendefinisikan perusahaan</p>
+<p><img src="../../img/sales-order/penjelasan-tab-other-information-4.png" alt="" /></p>
+<a class="header" href="#a-namefield-requested-date-otherrequested-datea" id="a-namefield-requested-date-otherrequested-datea"><h4><a name="field-requested-date-other">Requested Date</a></h4></a>
+<p>Mendefinisikan tanggal permintaan <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-commitment-date-othercommitment-datea" id="a-namefield-commitment-date-othercommitment-datea"><h4><a name="field-commitment-date-other">Commitment Date</a></h4></a>
+<p>Mendefinisikan tanggal komitmen <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-efective-date-otherefective-datea" id="a-namefield-efective-date-otherefective-datea"><h4><a name="field-efective-date-other">Efective Date</a></h4></a>
+<p>Mendefinisikan tanggal efektif <em>Sales Order</em></p>
+<p><img src="../../img/sales-order/penjelasan-tab-other-information-5.png" alt="" /></p>
+<a class="header" href="#a-namefield-paidpaida" id="a-namefield-paidpaida"><h4><a name="field-paid">Paid</a></h4></a>
+<p>Menginformasikan status pembayaran <em>Sales Order</em>. Jika dicentang, maka <em>Sales Order</em> sudah dibayar lunas</p>
+<a class="header" href="#a-namefield-delivereddelivereda" id="a-namefield-delivereddelivereda"><h4><a name="field-delivered">Delivered</a></h4></a>
+<p>Menginformasikan status pengiriman <em>Sales Order</em>. Jika dicentang, maka produk sudah dikirim dan diterima oleh konsumen</p>
+<p><img src="../../img/sales-order/penjelasan-tab-other-information-6.png" alt="" /></p>
+<a class="header" href="#a-namefield-exceptionexceptiona" id="a-namefield-exceptionexceptiona"><h4><a name="field-exception">Exception</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-nametab-revisiontab-revisiona" id="a-nametab-revisiontab-revisiona"><h2><a name="tab-revision">TAB REVISION</a></h2></a>
+<p><img src="../../img/sales-order/penjelasan-tab-revision.png" alt="" /></p>
+<a class="header" href="#a-namefield-revisionsrevisionsa" id="a-namefield-revisionsrevisionsa"><h4><a name="field-revisions">Revisions</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-nametab-policytab-policya" id="a-nametab-policytab-policya"><h2><a name="tab-policy">TAB POLICY</a></h2></a>
+<p><img src="../../img/sales-order/penjelasan-tab-policy.png" alt="" /></p>
+<a class="header" href="#a-namefield-can-recreate-invoicecan-recreate-invoicea" id="a-namefield-can-recreate-invoicecan-recreate-invoicea"><h4><a name="field-can-recreate-invoice">Can Recreate Invoice</a></h4></a>
+<p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang membuka data <em>Sales Order</em> dapat membuat ulang invoice</p>
+<a class="header" href="#a-namefield-can-ignore-exceptioncan-ignore-exceptiona" id="a-namefield-can-ignore-exceptioncan-ignore-exceptiona"><h4><a name="field-can-ignore-exception">Can Ignore Exception</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namefield-can-send-by-emailcan-send-by-emaila" id="a-namefield-can-send-by-emailcan-send-by-emaila"><h4><a name="field-can-send-by-email">Can Send by Email</a></h4></a>
+<p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang membuka data <em>Sales Order</em> dapat megirim dokumen <em>Sales Order</em> melalui email</p>
+<a class="header" href="#a-namefield-change-can-confirmcan-confirm-salea" id="a-namefield-change-can-confirmcan-confirm-salea"><h4><a name="field-change-can-confirm">Can Confirm Sale</a></h4></a>
+<p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang membuka data <em>Sales Order</em> dapat melakukan <a href="transaksi/sales-order/./konfirmasi.html">Mengkonfirmasi Sales Order</a>.</p>
+<a class="header" href="#a-namefield-can-view-invoicecan-view-invoicea" id="a-namefield-can-view-invoicecan-view-invoicea"><h4><a name="field-can-view-invoice">Can View Invoice</a></h4></a>
+<p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang membuka data <em>Sales Order</em> dapat melihat <em>Invoice</em></p>
+<a class="header" href="#a-namefield-can-create-invoicecan-create-invoicea" id="a-namefield-can-create-invoicecan-create-invoicea"><h4><a name="field-can-create-invoice">Can Create Invoice</a></h4></a>
+<p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang membuka data <em>Sales Order</em> dapat membuat invoice</p>
+<a class="header" href="#a-namefield-can-new-copy-quotationcan-new-copy-of-quotationa" id="a-namefield-can-new-copy-quotationcan-new-copy-of-quotationa"><h4><a name="field-can-new-copy-quotation">Can New Copy of Quotation</a></h4></a>
+<p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang menyalin ulang data <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-cancel-ordercan-cancel-ordera" id="a-namefield-cancel-ordercan-cancel-ordera"><h4><a name="field-cancel-order">Can Cancel Order</a></h4></a>
+<p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang membuka data <em>Sales Order</em> dapat melakukan <a href="transaksi/sales-order/./batal.html">Membatalkan Sales Order</a></p>
+<a class="header" href="#a-namefield-can-change-pricecan-change-pricea" id="a-namefield-can-change-pricecan-change-pricea"><h4><a name="field-can-change-price">Can Change Price</a></h4></a>
+<p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang membuka data <em>Sales Order</em> dapat mengganti harga</p>
+<a class="header" href="#penjelasan-detail-order-lines" id="penjelasan-detail-order-lines"><h1>Penjelasan Detail Order Lines</h1></a>
+<a class="header" href="#a-namepenjelasan-detaildetail-order-linesa" id="a-namepenjelasan-detaildetail-order-linesa"><h2><a name="penjelasan-detail">Detail Order Lines</a></h2></a>
+<p><img src="../../img/sales-order/detail-sale-order-lines.png" alt="" /></p>
+<a class="header" href="#a-namefield-productproducta" id="a-namefield-productproducta"><h4><a name="field-product">Product</a></h4></a>
+<p>Mendefinisikan produk</p>
+<a class="header" href="#a-namefield-lotlota" id="a-namefield-lotlota"><h4><a name="field-lot">Lot</a></h4></a>
+<p>Mendefinisikan Lot</p>
+<a class="header" href="#a-namefield-quantityquantitya" id="a-namefield-quantityquantitya"><h4><a name="field-quantity">Quantity</a></h4></a>
+<p>Menentukan jumlah barang dan satuan yang akan dipesan</p>
+<a class="header" href="#a-namefield-quantity-uosquantityuosa" id="a-namefield-quantity-uosquantityuosa"><h4><a name="field-quantity-Uos">Quantity(UoS)</a></h4></a>
+<p>Menentukan jumlah barang dan satuan kedua yang akan dipesan</p>
+<a class="header" href="#a-namefield-source-warehousesource-warehousea" id="a-namefield-source-warehousesource-warehousea"><h4><a name="field-source-warehouse">Source Warehouse</a></h4></a>
+<p>Mendefinisikan gudang yang akan mengeluarkan barang</p>
+<a class="header" href="#a-namefield-routeroutea" id="a-namefield-routeroutea"><h4><a name="field-route">Route</a></h4></a>
+<p>Mendefinisikan rute pengiriman barang</p>
+<a class="header" href="#a-namefield-packagingpackaginga" id="a-namefield-packagingpackaginga"><h4><a name="field-packaging">Packaging</a></h4></a>
+<p>Mendefinisikan kemasan produk</p>
+<a class="header" href="#a-namefield-taxestaxesa" id="a-namefield-taxestaxesa"><h4><a name="field-taxes">Taxes</a></h4></a>
+<p>Mendefinisikan pajak yang akan dikenakan pada produk</p>
+<a class="header" href="#a-namefield-deliv-lead-timedelivery-lead-timea" id="a-namefield-deliv-lead-timedelivery-lead-timea"><h4><a name="field-deliv-lead-time">Delivery Lead Time</a></h4></a>
+<p>Mendefinisikan waktu pengiriman barang</p>
+<a class="header" href="#a-namefield-request-daterequested-datea" id="a-namefield-request-daterequested-datea"><h4><a name="field-request-date">Requested Date</a></h4></a>
+<p>Mendefinisikan tanggal permintaan barang</p>
+<a class="header" href="#a-namefield-weightweighta" id="a-namefield-weightweighta"><h4><a name="field-weight">Weight</a></h4></a>
+<p>Menentukan berat dari produk</p>
+<a class="header" href="#a-namefield-package-weightpackage-weighta" id="a-namefield-package-weightpackage-weighta"><h4><a name="field-package-weight">Package Weight</a></h4></a>
+<p>Menentukan berat dari kemasan produk</p>
+<a class="header" href="#a-namefield-allotment-partnerallotment-partnera" id="a-namefield-allotment-partnerallotment-partnera"><h4><a name="field-allotment-partner">Allotment Partner</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namefield-package-pricepackage-pricea" id="a-namefield-package-pricepackage-pricea"><h4><a name="field-package-price">Package Price</a></h4></a>
+<p>Menginformasikan harga kemasan</p>
+<a class="header" href="#a-namefield-unit-priceunit-pricea" id="a-namefield-unit-priceunit-pricea"><h4><a name="field-unit-price">Unit Price</a></h4></a>
+<p>Menginformasikan harga satuan produk</p>
+<a class="header" href="#a-namefield-can-change-pricecan-change-pricea-1" id="a-namefield-can-change-pricecan-change-pricea-1"><h4><a name="field-can-change-price">Can Change Price</a></h4></a>
+<p>Disii otomatis oleh Odoo. Jika aktif, maka user yang membuka data dapat melakukan perubahan harga produk</p>
+<a class="header" href="#a-namefield-discountdiscounta" id="a-namefield-discountdiscounta"><h4><a name="field-discount">Discount(%)</a></h4></a>
+<p>Mendefinisikan persentase diskon yang akan diberikan</p>
+<a class="header" href="#a-namefield-description-produkdescriptiona" id="a-namefield-description-produkdescriptiona"><h4><a name="field-description-produk">Description</a></h4></a>
+<p>Mendefinisikan deskripsi produk</p>
+<a class="header" href="#a-namefield-manually-sourcedmanually-sourceda" id="a-namefield-manually-sourcedmanually-sourceda"><h4><a name="field-manually-sourced">Manually Sourced</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namefield-sourced-bysourced-bya" id="a-namefield-sourced-bysourced-bya"><h4><a name="field-sourced-by">Sourced By</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namefield-invoice-linesinvoice-linesa" id="a-namefield-invoice-linesinvoice-linesa"><h4><a name="field-invoice-lines">Invoice Lines</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#membuat-sales-order" id="membuat-sales-order"><h1>Membuat Sales Order</h1></a>
+<a class="header" href="#a-input" id="a-input"><h2>A. INPUT</h2></a>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<a class="header" href="#b-langkah-kerja" id="b-langkah-kerja"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; All Orders</strong>.</li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kanan form.</li>
+</ol>
+<p><img src="../../img/sales-order/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-customer">Customer</a></strong>. Harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-customer">Invoice Address</a></strong>. Harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-consginee">Consignee</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-delivery">Delivery Address</a></strong>. Harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-analytic">Contract/Analytic</a></strong>. Tidak harus diisi.</li>
+<li>Isi <strong><a href="transaksi/sales-order/./penjelasan.html#field-date">Date</a></strong>. Harus diisi.</li>
+<li>Isi <strong><a href="transaksi/sales-order/./penjelasan.html#field-valid">Valid Until</a></strong>. Tidak harus diisi.</li>
+<li>Isi <strong><a href="transaksi/sales-order/./penjelasan.html#field-ref-desc">Reference/Description</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-type">Type</a></strong>. Harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-warehouse">Default Warehouse</a></strong>. Harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-pricelist">Pricelist</a></strong>. Harus diisi.</li>
+<li>Buka tab <strong>Other Information</strong>.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-incoterm">Incoterm</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-salesperson">Salesperson</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-tags">Tags</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-operating-unit">Operating Unit</a></strong>. Harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-sales-team">Sales Team</a></strong> Tidak harus diisi.</li>
+<li>Isi <strong><a href="transaksi/sales-order/./penjelasan.html#field-source-document">Source Document</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-campaign">Campaign</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-channel">Channel</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-source">Source</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan.html#field-payment-term">Payment Term</a></strong>. Tidak harus diisi.</li>
+<li>Isi <strong><a href="transaksi/sales-order/./penjelasan.html#field-requested-date">Requested Date</a></strong>. Tidak harus diisi.</li>
+<li>Buka tab <strong>Order Lines</strong>.</li>
+<li><a name="l27"><a href="transaksi/sales-order/./membuat-line.html">Tambah</a>/<a href="transaksi/sales-order/./modifikasi-line.html">Modifikasi</a>/<a href="transaksi/sales-order/./meghapus-line.html">Hapus</a></a> <strong>Order Lines</strong>. Ulangi sampai <strong>Order Lines</strong> sesuai dengan keingnan.</li>
+<li><a name="l28">Klik</a> tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/sales-order/tombol-save.png" alt="" /></p>
+<a class="header" href="#c-output" id="c-output"><h2>C. OUTPUT</h2></a>
+<ul>
+<li>Sales order akan tersimpan dengan status <strong>Draft Quotation</strong></li>
+</ul>
+<p><img src="../../img/sales-order/status-draft-quotation.png" alt="" /></p>
+<a class="header" href="#memodifikasi-sales-order" id="memodifikasi-sales-order"><h1>Memodifikasi Sales Order</h1></a>
+<a class="header" href="#a-input-1" id="a-input-1"><h2>A. INPUT</h2></a>
+<ul>
+<li>Data sales order yang akan dimodifikasi harus memiliki status <strong>Draft Quotation</strong>.</li>
+</ul>
+<p><img src="../../img/sales-order/status-draft-quotation.png" alt="" /></p>
+<a class="header" href="#b-langkah-kerja-1" id="b-langkah-kerja-1"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; All Orders</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data sales order yang akan dimodifikasi. Abaikan jika data sudah dibuka.</li>
+<li><a name="l3">Klik</a> tombol <strong>Edit</strong> pada bagian atas-kanan form.</li>
+</ol>
+<p><img src="../../img/sales-order/tombol-edit.png" alt="" /></p>
+<ol start="4">
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-customer">Customer</a></strong> jika dibutuhkan. Harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-customer">Invoice Address</a></strong> jika dibutuhkan. Harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-consginee">Consignee</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-delivery">Delivery Address</a></strong> jika dibutuhkan. Harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-analytic">Contract/Analytic</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-date">Date</a></strong> jika dibutuhkan. Harus diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-valid">Valid Until</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-ref-desc">Reference/Description</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-type">Type</a></strong> jika dibutuhkan. Harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-warehouse">Default Warehouse</a></strong> jika dibutuhkan. Harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-pricelist">Pricelist</a></strong> jika dibutuhkan. Harus diisi.</li>
+<li>Buka tab <strong>Other Information</strong>.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-incoterm">Incoterm</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-salesperson">Salesperson</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-tags">Tags</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-operating-unit">Operating Unit</a></strong> jika dibutuhkan. Harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-sales-team">Sales Team</a></strong>  jika dibutuhkan. Tidak harus diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-source-document">Source Document</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-campaign">Campaign</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-channel">Channel</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-source">Source</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-payment-term">Payment Term</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan.html#field-requested-date">Requested Date</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Buka tab <strong>Order Lines</strong>.</li>
+<li><a name="l28"><a href="transaksi/sales-order/./membuat-line.html">Tambah</a>/<a href="transaksi/sales-order/./modifikasi-line.html">Modifikasi</a>/<a href="transaksi/sales-order/./meghapus-line.html">Hapus</a> <strong>Order Lines</strong></a>. Ulangi sampai <strong>Order Lines</strong> sesuai dengan keingnan.</li>
+<li><a name="l29">Klik</a> tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/sales-order/tombol-save.png" alt="" /></p>
+<a class="header" href="#c-output-1" id="c-output-1"><h2>C. OUTPUT</h2></a>
+<ul>
+<li>Sales order berubah sesuai dengan perubahan yang dilakukan.</li>
+</ul>
+<a class="header" href="#menghapus-sales-order" id="menghapus-sales-order"><h1>Menghapus Sales Order</h1></a>
+<a class="header" href="#a-input-2" id="a-input-2"><h2>A. INPUT</h2></a>
+<ul>
+<li>Data sales order yang akan dihapus harus memiliki status <strong>Draft Quotation</strong>.</li>
+</ul>
+<p><img src="../../img/sales-order/status-draft-quotation.png" alt="" /></p>
+<a class="header" href="#b-langkah-kerja-2" id="b-langkah-kerja-2"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; All Orders</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data sales order yang akan dihapus. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>More</strong> pada bagian atas-kanan form.</li>
+</ol>
+<p><img src="../../img/sales-order/tombol-more.png" alt="" /></p>
+<ol start="4">
+<li>Klik tombol <strong>Delete</strong> pada drop-down yang muncul dari tombol <strong>More</strong>.</li>
+</ol>
+<p><img src="../../img/sales-order/tombol-hapus-form.png" alt="" /></p>
+<ol start="5">
+<li>Klik tombol <strong>Ok</strong> pada dialog konfirmasi penghapusan.</li>
+</ol>
+<p><img src="../../img/sales-order/tombol-ok-hapus.png" alt="" /></p>
+<a class="header" href="#c-output-2" id="c-output-2"><h2>C. OUTPUT</h2></a>
+<ul>
+<li>Data sale order akan terhapus.</li>
+</ul>
+<a class="header" href="#membuat-sales-order-line" id="membuat-sales-order-line"><h1>Membuat Sales Order Line</h1></a>
+<p><em>(Instruksi kerja ini merupakan sub instruksi dari (1) <a href="transaksi/sales-order/./membuat.html">Membuat Sale Order</a>, atau (2) <a href="transaksi/sales-order/./modifikasi.html">Memodifikasi Sale Order</a>. Instruksi kerja ini tidak bisa berdiri sendiri)</em></p>
+<a class="header" href="#a-input-3" id="a-input-3"><h2>A. INPUT</h2></a>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<a class="header" href="#b-instruksi-kerja" id="b-instruksi-kerja"><h2>B. INSTRUKSI KERJA</h2></a>
+<ol>
+<li><a name="l1">Klik</a> tombol <strong>Add an Item</strong> pada tabel <strong>Order Lines</strong></li>
+</ol>
+<p><img src="../../img/sales-order/tombol-add-item.png" alt="" /></p>
+<p>Pop-up <strong>Order Lines</strong> akan muncul</p>
+<p><img src="../../img/sales-order/pop-up-order-lines.png" alt="" /></p>
+<ol start="2">
+<li><a name="l2">Pilih</a> <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-product">Product</a></strong>. Harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-lot">Lot</a></strong>. Tidak harus diisi.</li>
+<li>Isi <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-quantity">Quantity</a></strong>. Harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-quantity">UoM</a></strong>. Harus diisi.</li>
+<li>Isi <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-quantity-uos">Quantity (UoS)</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-quantity-uos">UoS</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-source-warehouse">Source Warehouse</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-route">Route</a></strong>. Tidak harus diisi.</li>
+<li>Isi <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-unit-price">Price Unit</a></strong>.  Harus diisi.</li>
+<li>Isi <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-discount">Discount (%)</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-packaging">Packaging</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-taxes">Taxes</a></strong>. Tidak harus diisi.</li>
+<li>Isi <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-delivery-lead-time">Delivery Lead Time</a></strong>. Tidak harus diisi.</li>
+<li>Isi <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-request-date">Requested Date</a></strong>. Tidak harus diisi.</li>
+<li>Isi <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-weight">Weight</a></strong>. Tidak harus diisi.</li>
+<li>Isi <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-package-weight">Package Weight</a></strong>. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-allotment-partner">Allotment Partner</a></strong>. Tidak harus diisi.</li>
+<li>Isi <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-description-produk">Description</a></strong>. Harus diisi.</li>
+<li>Aktifkan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-manually-sourced">Manually Sourced</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-sourced-by">Sourced by</a></strong>. Tidak harus diisi.</li>
+<li>Klik tombol <strong>Save &amp; Close</strong> atau <strong>Save &amp; New</strong> untuk menyimpan data. Ulangi <a href="#l1">lngkah ke-1</a> apabila <strong>Save &amp; New</strong> yang dipilih. Lanjutkan ke <a href="transaksi/sales-order/./membuat.html#l27">langkah ke-27 instruksi kerja Membuat Sales Order</a> atau <a href="transaksi/sales-order/./modifikasi.html#l28">langkah ke-28 instruksi kerja Memodifikasi Sales Order</a> apabila <strong>Save &amp; Close</strong> yang dipilih.</li>
+</ol>
+<p>Tombol <strong>Save &amp; Close</strong></p>
+<p><img src="../../img/sales-order/tombol-save-close.png" alt="" /></p>
+<p>Tombol <strong>Save &amp; New</strong></p>
+<p><img src="../../img/sales-order/tombol-save-new.png" alt="" /></p>
+<a class="header" href="#memodifikasi-sales-order-line" id="memodifikasi-sales-order-line"><h1>Memodifikasi Sales Order Line</h1></a>
+<p><em>(Instruksi kerja ini merupakan sub instruksi dari (1) <a href="transaksi/sales-order/./membuat.html">Membuat Sale Order</a>, atau (2) <a href="transaksi/sales-order/./modifikasi.html">Memodifikasi Sale Order</a>. Instruksi kerja ini tidak bisa berdiri sendiri)</em></p>
+<a class="header" href="#a-input-4" id="a-input-4"><h2>A. INPUT</h2></a>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<a class="header" href="#b-instruksi-kerja-1" id="b-instruksi-kerja-1"><h2>B. INSTRUKSI KERJA</h2></a>
+<ol>
+<li><a name="l1">Buka</a> data <strong>Order Line</strong> yang akan dimodifikasi.</li>
+</ol>
+<p>Pop-up <strong>Order Lines</strong> akan muncul</p>
+<p><img src="../../img/sales-order/pop-up-order-lines.png" alt="" /></p>
+<ol start="2">
+<li><a name="l2">Pilih</a> dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-product">Product</a></strong> jika dibutuhkan. Harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-lot">Lot</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-quantity">Quantity</a></strong> jika dibutuhkan. Harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-quantity">UoM</a></strong> jika dibutuhkan. Harus diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-quantity-uos">Quantity (UoS)</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-quantity-uos">UoS</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-source-warehouse">Source Warehouse</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-route">Route</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-unit-price">Price Unit</a></strong> jika dibutuhkan.  Harus diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-discount">Discount (%)</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-packaging">Packaging</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-taxes">Taxes</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-delivery-lead-time">Delivery Lead Time</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-request-date">Requested Date</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-weight">Weight</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-package-weight">Package Weight</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-allotment-partner">Allotment Partner</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Isi dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-description-produk">Description</a></strong> jika dibutuhkan. Harus diisi.</li>
+<li>Aktifkan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-manually-sourced">Manually Sourced</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong><a href="transaksi/sales-order/./penjelasan-detail-order-lines.html#field-sourced-by">Sourced by</a></strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Klik tombol <strong>Save</strong>. Lanjutkan ke <a href="transaksi/sales-order/./membuat.html#l27">langkah ke-27 instruksi kerja Membuat Sales Order</a> atau <a href="transaksi/sales-order/./modifikasi.html#l28">langkah ke-28 instruksi kerja Memodifikasi Sales Order</a>.</li>
+</ol>
+<p><img src="../../img/sales-order/tombol-save-pop-up-line.png" alt="" /></p>
+<a class="header" href="#menghapus-sales-order-line" id="menghapus-sales-order-line"><h1>Menghapus Sales Order Line</h1></a>
+<p><em>(Instruksi kerja ini merupakan sub instruksi dari (1) <a href="transaksi/sales-order/./membuat.html">Membuat Sale Order</a>, atau (2) <a href="transaksi/sales-order/./modifikasi.html">Memodifikasi Sale Order</a>. Instruksi kerja ini tidak bisa berdiri sendiri)</em></p>
+<a class="header" href="#a-input-5" id="a-input-5"><h2>A. INPUT</h2></a>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<a class="header" href="#b-instruksi-kerja-2" id="b-instruksi-kerja-2"><h2>B. INSTRUKSI KERJA</h2></a>
+<ol>
+<li>Klik icon tempat sampah pada bagian kanan order line yang akan dihapus.</li>
+</ol>
+<p><img src="../../img/sales-order/tombol-hapus-line.png" alt="" /></p>
+<a class="header" href="#c-output-3" id="c-output-3"><h2>C. OUTPUT</h2></a>
+<ul>
+<li>Order line akan terhapus.</li>
+</ul>
+<a class="header" href="#mengirimkan-sales-order-via-email" id="mengirimkan-sales-order-via-email"><h1>Mengirimkan Sales Order Via Email</h1></a>
+<a class="header" href="#a-input-6" id="a-input-6"><h2>A. INPUT</h2></a>
+<ul>
+<li>Data sales order yang akan dikirim via email harus memiliki status <strong>Draft Quotation</strong>.</li>
+</ul>
+<p><img src="../../img/sales-order/status-draft-quotation.png" alt="" /></p>
+<ul>
+<li>User yang akan mengirim via email harus memiliki akses untuk mengirim via email sales order.</li>
+</ul>
+<a class="header" href="#b-langkah-kerja-3" id="b-langkah-kerja-3"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; All Orders</strong>. Abaikan jika sudah berada
+pada menu yang dimaksud.</li>
+<li>Buka data sales order yang akan dikirim via email. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Send Quotation</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/sales-order/tombol-send.png" alt="" /></p>
+<p>Pop-up <strong>Compose Email</strong> akan muncul</p>
+<p><img src="../../img/sales-order/pop-up-send-quotation.png" alt="" /></p>
+<ol start="4">
+<li>Sesuaikan isi email jika dibutuhkan</li>
+<li>Klik tombol <strong>Send</strong> pada bagian bawah-kiri pop-up <strong>Compose Email</strong></li>
+</ol>
+<p><img src="../../img/sales-order/tombol-send-email.png" alt="" /></p>
+<a class="header" href="#c-output-4" id="c-output-4"><h2>C. OUTPUT</h2></a>
+<ul>
+<li>Status dari sales order akan berubah menjadi <strong>Quotation Sent</strong></li>
+</ul>
+<p><img src="../../img/sales-order/status-quotation-sent.png" alt="" /></p>
+<a class="header" href="#mengkonfirmasi-sales-order" id="mengkonfirmasi-sales-order"><h1>Mengkonfirmasi Sales Order</h1></a>
+<a class="header" href="#a-input-7" id="a-input-7"><h2>A. INPUT</h2></a>
+<ul>
+<li>Data sales order yang akan dikonfirmasi harus memiliki status <strong>Draft Quotation</strong>.</li>
+</ul>
+<p><img src="../../img/sales-order/status-draft-quotation.png" alt="" /></p>
+<ul>
+<li>User yang akan mengkonfirmasi harus memiliki akses untuk mengkonfirmasi sales order.</li>
+</ul>
+<a class="header" href="#b-langkah-kerja-4" id="b-langkah-kerja-4"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; All Orders</strong>. Abaikan jika sudah berada
+pada menu yang dimaksud.</li>
+<li>Buka data sales order yang akan dikonfirmasi. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Confirm Sale</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/sales-order/tombol-confirm-sale.png" alt="" /></p>
+<a class="header" href="#c-output-5" id="c-output-5"><h2>C. OUTPUT</h2></a>
+<ul>
+<li>Status dari sales order akan berubah menjadi <strong>Sales Order</strong></li>
+</ul>
+<p><img src="../../img/sales-order/status-sales-order.png" alt="" /></p>
+<ul>
+<li>Isian sales order sudah tidak bisa diubah</li>
+</ul>
+<a class="header" href="#membatalkan-sales-order" id="membatalkan-sales-order"><h1>Membatalkan Sales Order</h1></a>
+<a class="header" href="#a-input-8" id="a-input-8"><h2>A. INPUT</h2></a>
+<ul>
+<li>Data sales order yang akan dibatalkan harus memiliki status (1) <strong>Draft Quotation</strong>, atau (2) <strong>Sales Order</strong>, atau (3) <strong>Sale To Invoice</strong></li>
+</ul>
+<p><img src="../../img/sales-order/status-sales-order.png" alt="" /></p>
+<p><img src="../../img/sales-order/status-sales-to-invoice.png" alt="" /></p>
+<ul>
+<li>User yang akan membatalkan harus memiliki akses untuk membatalkan sales order.</li>
+</ul>
+<a class="header" href="#b-langkah-kerja-5" id="b-langkah-kerja-5"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; All Orders</strong>. Abaikan jika sudah berada
+pada menu yang dimaksud.</li>
+<li>Buka data sales order yang akan dibatalkan. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Cancel Quotation</strong> atau <strong>Cancel Order</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/sales-order/tombol-cancel.png" alt="" /></p>
+<p><img src="../../img/sales-order/tombol-cancel-order.png" alt="" /></p>
+<p>Pop-up <strong>Reason for Cancellation</strong> akan muncul</p>
+<p><img src="../../img/sales-order/pop-up-cancel-reason.png" alt="" /></p>
+<ol start="4">
+<li>Pilih <strong>Reason</strong> sesuai dengan alasan pembatalan</li>
+<li>Klik tombol <strong>Confirm</strong> pada bagian bawah-kiri pop-up <strong>Reason for Cancellation</strong></li>
+</ol>
+<p><img src="../../img/sales-order/tombol-confirm-cancel.png" alt="" /></p>
+<a class="header" href="#c-output-6" id="c-output-6"><h2>C. OUTPUT</h2></a>
+<ul>
+<li>Status dari sales order akan berubah menjadi <strong>Cancelled</strong></li>
+</ul>
+<p><img src="../../img/sales-order/status-cancelled.png" alt="" /></p>
+<ul>
+<li>Isian sales order sudah tidak bisa diubah</li>
+</ul>
+<a class="header" href="#merestart-sales-order" id="merestart-sales-order"><h1>Merestart Sales Order</h1></a>
+<a class="header" href="#a-input-9" id="a-input-9"><h2>A. INPUT</h2></a>
+<ul>
+<li>Data sales order yang akan direstart harus memiliki status <strong>Cancelled</strong>.</li>
+</ul>
+<p><img src="../../img/sales-order/status-cancelled.png" alt="" /></p>
+<ul>
+<li>User yang akan merestart harus memiliki akses untuk merestart sales order.</li>
+</ul>
+<a class="header" href="#b-langkah-kerja-6" id="b-langkah-kerja-6"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; All Orders</strong>. Abaikan jika sudah berada
+pada menu yang dimaksud.</li>
+<li>Buka data sales order yang akan direstart. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Back to Draft</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/sales-order/tombol-restart.png" alt="" /></p>
+<a class="header" href="#c-output-7" id="c-output-7"><h2>C. OUTPUT</h2></a>
+<ul>
+<li>Status dari sales order akan berubah menjadi <strong>Draft Quotation</strong></li>
+</ul>
+<p><img src="../../img/sales-order/status-draft-quotation.png" alt="" /></p>
+<ul>
+<li>Isian sales order sudah dapat diubah</li>
+</ul>
+<a class="header" href="#opportunity" id="opportunity"><h1>Opportunity</h1></a>
+<ul>
+<li><a href="transaksi/./opportunity/penjelasan.html">Penjelasan</a></li>
+<li><a href="transaksi/./opportunity/membuat.html">Membuat Opportunity</a></li>
+<li><a href="transaksi/./opportunity/memodifikasi.html">Memodifikasi Opportunity</a></li>
+<li><a href="transaksi/./opportunity/menghapus.html">Menghapus Opportunity</a></li>
+<li><a href="transaksi/./opportunity/memindahkan-stage.html">Memindahkan Stage Opportunity</a></li>
+<li><a href="transaksi/./opportunity/membuat-quotation.html">Membuat Quotation Dari Opportunity</a></li>
+<li><a href="transaksi/./opportunity/menandai-menang.html">Menandai Opportunity Sebagai Menang</a></li>
+<li><a href="transaksi/./opportunity/menandai-kalah.html">Menandai Opportunity Sebagai Kalah</a></li>
+</ul>
+<a class="header" href="#penjelasan-1" id="penjelasan-1"><h1>Penjelasan</h1></a>
+<a class="header" href="#membuat-opportunity" id="membuat-opportunity"><h1>Membuat Opportunity</h1></a>
+<a class="header" href="#a-input-10" id="a-input-10"><h2>A. INPUT</h2></a>
+<p><em>(Tidak ada penjelasan khusus)</em></p>
+<a class="header" href="#b-langkah-kerja-7" id="b-langkah-kerja-7"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; Opportunites</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Klik tombol <strong>Create</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/opportunity/tombol-create.png" alt="" /></p>
+<ol start="3">
+<li>Isi <strong>Subject</strong>. Harus diisi.</li>
+<li>Isi <strong>Expected Revenue</strong>. Harus diisi.</li>
+<li>Pilih <strong>Customer</strong>. Harus diisi.</li>
+<li>Isi dan sesuaikan <strong>Email</strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Isi dan sesuaikan <strong>Phone</strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih <strong>Salesperson</strong>. Tidak harus diisi.</li>
+<li>Pilih <strong>Sales Team</strong>. Tidak harus diisi.</li>
+<li>Isi <strong>Expected Closing</strong>. Tidak harus diisi.</li>
+<li>Pilih <strong>Priority</strong>. Tidak harus diisi.</li>
+<li>Pilih <strong>Tags</strong>. Tidak harus diisi.</li>
+<li>Buka tab <strong>Internal Notes</strong>.</li>
+<li>Isi <strong>Notes</strong>. Tidak harus diisi.</li>
+<li>Buka tab <strong>Lead</strong>.</li>
+<li>Pilih <strong>Campaign</strong>. Tidak harus diisi.</li>
+<li>Pilih <strong>Channel</strong>. Tidak harus diisi.</li>
+<li>Pilih <strong>Source</strong>. Tidak harus diisi.</li>
+<li>Pilih <strong>Operating Unit</strong>. Tidak harus diisi.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/opportunity/tombol-simpan.png" alt="" /></p>
+<a class="header" href="#c-output-8" id="c-output-8"><h2>C. OUTPUT</h2></a>
+<ul>
+<li>Data opportunity akan terbuat.</li>
+</ul>
+<a class="header" href="#memodifikasi-opportunity" id="memodifikasi-opportunity"><h1>Memodifikasi Opportunity</h1></a>
+<a class="header" href="#a-input-11" id="a-input-11"><h2>A. INPUT</h2></a>
+<p><em>(Tidak ada penjelasan khusus)</em></p>
+<a class="header" href="#b-langkah-kerja-8" id="b-langkah-kerja-8"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; Opportunites</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data yang akan dimodifikasi. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Edit</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/opportunity/tombol-edit.png" alt="" /></p>
+<ol start="4">
+<li>Isi dan sesuaikan <strong>Subject</strong> jika dibutuhkan. Harus diisi.</li>
+<li>Isi dan sesuaikan <strong>Expected Revenue</strong> jika dibutuhkan. Harus diisi.</li>
+<li>Pilih dan sesuaikan <strong>Customer</strong> jika dibutuhkan. Harus diisi.</li>
+<li>Isi dan sesuaikan <strong>Email</strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Isi dan sesuaikan <strong>Phone</strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong>Salesperson</strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong>Sales Team</strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Isi dan sesuaikan <strong>Expected Closing</strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong>Priority</strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong>Tags</strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Buka tab <strong>Internal Notes</strong>.</li>
+<li>Isi dan sesuaikan <strong>Notes</strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Buka tab <strong>Lead</strong>.</li>
+<li>Pilih dan sesuaikan <strong>Campaign</strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong>Channel</strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong>Source</strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Pilih dan sesuaikan <strong>Operating Unit</strong> jika dibutuhkan. Tidak harus diisi.</li>
+<li>Klik tombol <strong>Save</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/opportunity/tombol-simpan.png" alt="" /></p>
+<a class="header" href="#c-output-9" id="c-output-9"><h2>C. OUTPUT</h2></a>
+<ul>
+<li>Data opportunity akan berubah sesuai dengan perubahan yang dilakukan.</li>
+</ul>
+<a class="header" href="#menghapus-opportunity" id="menghapus-opportunity"><h1>Menghapus Opportunity</h1></a>
+<a class="header" href="#a-input-12" id="a-input-12"><h2>A. INPUT</h2></a>
+<p><em>(Tidak ada penjelasan khusus)</em></p>
+<a class="header" href="#b-langkah-kerja-9" id="b-langkah-kerja-9"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; Opportunites</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data yang akan dihapus. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>More</strong> pada bagian atas-kanan form.</li>
+</ol>
+<p><img src="../../img/opportunity/tombol-more.png" alt="" /></p>
+<ol start="4">
+<li>Klik tombol <strong>Delete</strong> pada drop-down yang muncul dari tombol <strong>More</strong>.</li>
+</ol>
+<p><img src="../../img/opportunity/tombol-hapus-form.png" alt="" /></p>
+<ol start="5">
+<li>Klik tombol <strong>Ok</strong> pada dialog konfirmasi penghapusan.</li>
+</ol>
+<p><img src="../../img/opportunity/tombol-ok-hapus.png" alt="" /></p>
+<a class="header" href="#c-output-10" id="c-output-10"><h2>C. OUTPUT</h2></a>
+<p><em>(Tidak ada instruksi khusus)</em></p>
+<a class="header" href="#memindahkan-stage-opportunity" id="memindahkan-stage-opportunity"><h1>Memindahkan Stage Opportunity</h1></a>
+<a class="header" href="#a-input-13" id="a-input-13"><h2>A. INPUT</h2></a>
+<p><em>(Tidak ada penjelasan khusus)</em></p>
+<a class="header" href="#b-langkah-kerja-10" id="b-langkah-kerja-10"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; Opportunites</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data yang akan diubah stagenya. Abaikan jika data sudah dibuka.</li>
+<li>Klik stage yang diinginkan pada bagian atas-kanan form.</li>
+</ol>
+<p><img src="../../img/opportunity/statusbar.png" alt="" /></p>
+<a class="header" href="#c-output-11" id="c-output-11"><h2>C. OUTPUT</h2></a>
+<ul>
+<li>Status dari opportunity akan berubah sesuai dengan stage yang dipilih.</li>
+</ul>
+<a class="header" href="#membuat-quotation-dari-opportunity" id="membuat-quotation-dari-opportunity"><h1>Membuat Quotation Dari Opportunity</h1></a>
+<a class="header" href="#a-input-14" id="a-input-14"><h2>A. INPUT</h2></a>
+<p><em>(Tidak ada penjelasan khusus)</em></p>
+<a class="header" href="#b-langkah-kerja-11" id="b-langkah-kerja-11"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; Opportunites</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data yang akan dibuat quotationnya. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Convert to Quotation</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/opportunity/tombol-convert.png" alt="" /></p>
+<ol start="4">
+<li>Pop-up <strong>Make Quotation</strong> akan muncul.</li>
+</ol>
+<p><img src="../../img/opportunity/pop-up-make-quotation.png" alt="" /></p>
+<ol start="5">
+<li>Isi dan sesuaikan <strong>Customer</strong> jika dibutuhkan. Harus diisi.</li>
+<li>Klik tombol <strong>Create</strong> pada bagian bawah-kiri pop-up <strong>Make Quotation</strong>.</li>
+</ol>
+<p><img src="../../img/opportunity/tombol-create-popup-make-quotation.png" alt="" /></p>
+<ol start="7">
+<li>Data quotation baru akan terbuat dan terbuka.</li>
+<li>Lanjutkan ke <a href="transaksi/opportunity/../sales-order/modifikasi.html#l3">langkah ke-3 instruksi kerja Memodifikasi Sales Order</a>.</li>
+</ol>
+<a class="header" href="#c-output-12" id="c-output-12"><h2>C. OUTPUT</h2></a>
+<ul>
+<li>Data sale order terbuat dengan status <strong>Draft</strong>.</li>
+</ul>
+<a class="header" href="#menandai-opportunity-sebagai-menang" id="menandai-opportunity-sebagai-menang"><h1>Menandai Opportunity Sebagai Menang</h1></a>
+<a class="header" href="#a-input-15" id="a-input-15"><h2>A. INPUT</h2></a>
+<p><em>(Tidak ada penjelasan khusus)</em></p>
+<a class="header" href="#b-langkah-kerja-12" id="b-langkah-kerja-12"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; Opportunites</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data yang akan dimodifikasi. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Mark Won</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/opportunity/tombol-mark-won.png" alt="" /></p>
+<a class="header" href="#c-output-13" id="c-output-13"><h2>C. OUTPUT</h2></a>
+<p><em>(Tidak ada penjelasan khusus)</em></p>
+<a class="header" href="#menandai-opportunity-sebagai-kalah" id="menandai-opportunity-sebagai-kalah"><h1>Menandai Opportunity Sebagai Kalah</h1></a>
+<a class="header" href="#a-input-16" id="a-input-16"><h2>A. INPUT</h2></a>
+<p><em>(Tidak ada penjelasan khusus)</em></p>
+<a class="header" href="#b-langkah-kerja-13" id="b-langkah-kerja-13"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; Opportunites</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data yang akan dimodifikasi. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Mark Lost</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/opportunity/tombol-mark-lost.png" alt="" /></p>
+<ol start="4">
+<li>Pop-up <strong>Reason for the Lost</strong> akan muncul.</li>
+</ol>
+<p><img src="../../img/opportunity/popup-reason-for-lost.png" alt="" /></p>
+<ol start="5">
+<li>Pilih <strong>Reason</strong>. Harus diisi.</li>
+<li>Klik tombol <strong>Confirm</strong> pada bagian atas-kiri pop-up <strong>Reason for the Lost</strong>.</li>
+</ol>
+<p><img src="../../img/opportunity/tombol-confirm-popup-reason-for-lost.png" alt="" /></p>
+<a class="header" href="#c-output-14" id="c-output-14"><h2>C. OUTPUT</h2></a>
+<p><em>(Tidak ada penjelasan khusus)</em></p>
+<a class="header" href="#membuat-master-project-dari-opportunity" id="membuat-master-project-dari-opportunity"><h1>Membuat Master Project Dari Opportunity</h1></a>
+<a class="header" href="#a-input-17" id="a-input-17"><h2>A. INPUT</h2></a>
+<p><em>(Tidak ada penjelasan khusus)</em></p>
+<a class="header" href="#b-langkah-kerja-14" id="b-langkah-kerja-14"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; Opportunites</strong>. Abaikan jika sudah berada pada menu yang dimaksud.</li>
+<li>Buka data yang akan dibuatkan master projectnya. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Create Master Project</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/opportunity/tombol-create-master-project.png" alt="" /></p>
+<ol start="4">
+<li>Pop-up <strong>Create Master Project</strong> akan muncul.</li>
+</ol>
+<p><img src="../../img/opportunity/pop-up-create-master-project.png" alt="" /></p>
+<ol start="5">
+<li>Isi <strong>Project Name</strong>.</li>
+<li>Pilih <strong>Parent Analytic Account</strong>.</li>
+<li>Klik tombol <strong>Confirm</strong> pada bagian bawah-kiri pop-up <strong>Create Master Project</strong>.</li>
+</ol>
+<p><img src="../../img/opportunity/tombol-confirm-pop-up-create-master-project.png" alt="" /></p>
+<a class="header" href="#c-output-15" id="c-output-15"><h2>C. OUTPUT</h2></a>
+<ul>
+<li>Master project untuk opportunity akan terbuat</li>
+</ul>
+<a class="header" href="#konfigurasi" id="konfigurasi"><h1>Konfigurasi</h1></a>
+<a class="header" href="#sales-order-type" id="sales-order-type"><h1>Sales Order Type</h1></a>
+<a class="header" href="#penjelasan-sales-order-type" id="penjelasan-sales-order-type"><h1>Penjelasan Sales Order Type</h1></a>
+<p>Informasi pada Sales Order Type dibagi menjadi beberapa area, diantaranya:</p>
+<ul>
+<li><a href="#bagian-header">Header</a></li>
+<li><a href="#warehouse-policy">Warehouse Policy</a></li>
+<li><a href="#product-policy">Product Policy</a></li>
+<li><a href="#workflow-policy">Sale Order Workflow Button Policy</a></li>
+<li><a href="#price-change-policy">Price Change Policy</a></li>
+</ul>
+<a class="header" href="#a-nameheaderheadera-1" id="a-nameheaderheadera-1"><h2><a name="header">HEADER</a></h2></a>
+<p><img src="../../img/sales-order-type/header.png" alt="" /></p>
+<a class="header" href="#a-namefield-namenamea" id="a-namefield-namenamea"><h4><a name="field-name">Name</a></h4></a>
+<p>Nama tipe <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-warehousewarehousea" id="a-namefield-warehousewarehousea"><h4><a name="field-warehouse">Warehouse</a></h4></a>
+<p>Mendefinisikan gudang</p>
+<a class="header" href="#a-namefield-companycompanya-1" id="a-namefield-companycompanya-1"><h4><a name="field-company">Company</a></h4></a>
+<p>Mendefinisikan perusahaan</p>
+<a class="header" href="#a-namefield-entry-sequenceentry-sequencea" id="a-namefield-entry-sequenceentry-sequencea"><h4><a name="field-entry-sequence">Entry Sequence</a></h4></a>
+<p>Mendefinisikan format <em>Sequence</em> untuk penomoran <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-billing-journalbilling-journala" id="a-namefield-billing-journalbilling-journala"><h4><a name="field-billing-journal">Billing Journal</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namefield-refund-billing-journalrefund-billing-journala" id="a-namefield-refund-billing-journalrefund-billing-journala"><h4><a name="field-refund-billing-journal">Refund Billing Journal</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namefield-refund-billing-journalrefund-billing-journala-1" id="a-namefield-refund-billing-journalrefund-billing-journala-1"><h4><a name="field-refund-billing-journal">Refund Billing Journal</a></h4></a>
+<p>#TODO</p>
+<a class="header" href="#a-namefield-shipping-policyshipping-policya-1" id="a-namefield-shipping-policyshipping-policya-1"><h4><a name="field-shipping-policy">Shipping Policy</a></h4></a>
+<p>Medefiniskan kebijakan pengiriman barang. Pilihan ini terbagi atas 2 pilihan, yaitu:</p>
+<ul>
+<li><strong>Deliver each product when available</strong></li>
+<li><strong>Deliver all product at once</strong></li>
+</ul>
+<a class="header" href="#a-namefield-create-invoicecreate-invoicea-1" id="a-namefield-create-invoicecreate-invoicea-1"><h4><a name="field-create-invoice">Create Invoice</a></h4></a>
+<p>Medefiniskan pembuatan <em>Invoice</em>. Pilihan ini terbagi atas 3 pilihan, yaitu:</p>
+<ul>
+<li><strong>On Demand:</strong> Invoice akan dibuat berdasarkan permintaan</li>
+<li><strong>On Delivery Order:</strong> Invoice akan dibuat pada saat pengiriman</li>
+<li><strong>Before Delivery:</strong> Invoice akan dibuat sebelum pengiriman</li>
+</ul>
+<a class="header" href="#a-namefield-invoice-controlinvoice-controla" id="a-namefield-invoice-controlinvoice-controla"><h4><a name="field-invoice-control">Invoice Control</a></h4></a>
+<p>Medefiniskan pengontrolan invoice. Pilihan ini terbagi atas 3 pilihan, yaitu:</p>
+<ul>
+<li><strong>Invoiced</strong></li>
+<li><strong>To Be Invoiced</strong></li>
+<li><strong>Not Applicable</strong></li>
+</ul>
+<a class="header" href="#a-namefield-payment-termpayment-terma-1" id="a-namefield-payment-termpayment-terma-1"><h4><a name="field-payment-term">Payment Term</a></h4></a>
+<p>Mendefinisikan ketentuan pembayaran</p>
+<a class="header" href="#a-namefield-pricelistpricelista-1" id="a-namefield-pricelistpricelista-1"><h4><a name="field-pricelist">Pricelist</a></h4></a>
+<p>Mendefinisikan <em>Pricelist</em></p>
+<a class="header" href="#a-namefield-incotermincoterma-1" id="a-namefield-incotermincoterma-1"><h4><a name="field-incoterm">Incoterm</a></h4></a>
+<blockquote>
+<p><strong>Catatan:</strong> (Inggris: <em>International Commercial Terms</em> number disingkat Incoterm)</p>
+</blockquote>
+<p>Mendefinisikan <em>Incoterm</em></p>
+<a class="header" href="#a-namewarehouse-policywarehouse-policya" id="a-namewarehouse-policywarehouse-policya"><h2><a name="warehouse-policy">WAREHOUSE POLICY</a></h2></a>
+<p><img src="../../img/sales-order-type/warehouse-policy.png" alt="" /></p>
+<a class="header" href="#a-namefield-limit-warehouse-selectionlimit-warehouse-selectiona" id="a-namefield-limit-warehouse-selectionlimit-warehouse-selectiona"><h4><a name="field-limit-warehouse-selection">Limit Warehouse Selection</a></h4></a>
+<p>Jika dicentang, maka pilihan gudang pada <em>Sales Order</em> akan dibatasi sesuai dengan warehouse yang sudah ditentukan pada list diatas</p>
+<a class="header" href="#a-nameproduct-policyproduct-policya" id="a-nameproduct-policyproduct-policya"><h2><a name="product-policy">PRODUCT POLICY</a></h2></a>
+<p><img src="../../img/sales-order-type/product-policy.png" alt="" /></p>
+<a class="header" href="#a-namefield-limit-product-selectionlimit-product-selectiona" id="a-namefield-limit-product-selectionlimit-product-selectiona"><h4><a name="field-limit-product-selection">Limit Product Selection</a></h4></a>
+<p>Jika dicentang, maka pilihan produk pada <em>Sales Order</em> akan dibatasi sesuai dengan produk yang sudah ditentukan pada list diatas</p>
+<a class="header" href="#a-nameworkflow-policysale-order-workflow-button-policya" id="a-nameworkflow-policysale-order-workflow-button-policya"><h2><a name="workflow-policy">SALE ORDER WORKFLOW BUTTON POLICY</a></h2></a>
+<p><img src="../../img/sales-order-type/sale-order-workflow-policy.png" alt="" /></p>
+<a class="header" href="#a-namefield-allow-recreate-invoiceallow-to-recreate-invoicea" id="a-namefield-allow-recreate-invoiceallow-to-recreate-invoicea"><h4><a name="field-allow-recreate-invoice">Allow to Recreate Invoice</a></h4></a>
+<p>Mendefinisikan group yang memperbolehkan user untuk melakukan <em>Recreate Invoice</em> pada data <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-allow-ignore-exceptionallow-to-ignore-exceptiona" id="a-namefield-allow-ignore-exceptionallow-to-ignore-exceptiona"><h4><a name="field-allow-ignore-exception">Allow to Ignore Exception</a></h4></a>
+<p>Mendefinisikan group yang memperbolehkan user untuk melakukan <em>Ignore Exception</em> pada data <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-allow-send-by-emailallow-to-send-by-emaila" id="a-namefield-allow-send-by-emailallow-to-send-by-emaila"><h4><a name="field-allow-send-by-email">Allow to Send by Email</a></h4></a>
+<p>Mendefinisikan group yang memperbolehkan user untuk melakukan <em>Send By Email</em> pada data <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-allow-can-confirmallow-to-confirm-salea" id="a-namefield-allow-can-confirmallow-to-confirm-salea"><h4><a name="field-allow-can-confirm">Allow to Confirm Sale</a></h4></a>
+<p>Mendefinisikan group yang memperbolehkan user untuk melakukan konfirmasi data <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-allow-view-invoiceallow-to-view-invoicea" id="a-namefield-allow-view-invoiceallow-to-view-invoicea"><h4><a name="field-allow-view-invoice">Allow to View Invoice</a></h4></a>
+<p>Mendefinisikan group yang memperbolehkan user untuk melihat <em>Invoice</em> pada data <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-allow-create-invoiceallow-to-create-invoicea" id="a-namefield-allow-create-invoiceallow-to-create-invoicea"><h4><a name="field-allow-create-invoice">Allow to Create Invoice</a></h4></a>
+<p>Mendefinisikan group yang memperbolehkan user untuk membuat <em>Invoice</em> pada data <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-allow-new-copy-quotationallow-to-new-copy-of-quotationa" id="a-namefield-allow-new-copy-quotationallow-to-new-copy-of-quotationa"><h4><a name="field-allow-new-copy-quotation">Allow to New Copy of Quotation</a></h4></a>
+<p>Mendefinisikan group yang memperbolehkan user untuk menyalin data <em>Sales Order</em></p>
+<a class="header" href="#a-namefield-allow-cancel-orderallow-to-cancel-ordera" id="a-namefield-allow-cancel-orderallow-to-cancel-ordera"><h4><a name="field-allow-cancel-order">Allow to Cancel Order</a></h4></a>
+<p>Mendefinisikan group yang memperbolehkan user untuk membatalkan data <em>Sales Order</em></p>
+<a class="header" href="#a-nameprice-change-policyprice-change-policya" id="a-nameprice-change-policyprice-change-policya"><h2><a name="price-change-policy">PRICE CHANGE POLICY</a></h2></a>
+<p><img src="../../img/sales-order-type/price-change-policy.png" alt="" /></p>
+<a class="header" href="#a-namefield-limit-price-changelimit-price-changea" id="a-namefield-limit-price-changelimit-price-changea"><h4><a name="field-limit-price-change">Limit Price Change</a></h4></a>
+<p>Jika dicentang, maka user yang dapat mengganti harga pada <em>Sales Order</em> akan dibatasi sesuai isian group <strong>Allowed to Change Price on Sales Order</strong></p>
+<a class="header" href="#a-namefield-allow-change-priceallowed-to-change-price-on-sales-ordera" id="a-namefield-allow-change-priceallowed-to-change-price-on-sales-ordera"><h4><a name="field-allow-change-price">Allowed to Change Price on Sales Order</a></h4></a>
+<p>Mendefinisikan group yang memperbolehkan user untuk mengganti harga pada data <em>Sales Order</em></p>
+<a class="header" href="#membuat-sales-order-type" id="membuat-sales-order-type"><h1>Membuat Sales Order Type</h1></a>
+<a class="header" href="#sales-order-cancel-reason" id="sales-order-cancel-reason"><h1>Sales Order Cancel Reason</h1></a>
+<a class="header" href="#penjelasan-sales-order-cancel-reason" id="penjelasan-sales-order-cancel-reason"><h1>Penjelasan Sales Order Cancel Reason</h1></a>
+<a class="header" href="#membuat-sales-order-cancel-reason" id="membuat-sales-order-cancel-reason"><h1>Membuat Sales Order Cancel Reason</h1></a>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

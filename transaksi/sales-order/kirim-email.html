@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Mengirimkan Sales Order Via Email - Odoo - Sales Management</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="../../prakata.html">Pra-Kata</a></li><li class="affix"><a href="../../terminologi.html">Terminologi</a></li><li><a href="../../transaksi.html"><strong aria-hidden="true">1.</strong> Transaksi</a></li><li><ol class="section"><li><a href="../../transaksi/sales-order.html"><strong aria-hidden="true">1.1.</strong> Sales Order</a></li><li><ol class="section"><li><a href="../../transaksi/sales-order/penjelasan.html"><strong aria-hidden="true">1.1.1.</strong> Penjelasan</a></li><li><ol class="section"><li><a href="../../transaksi/sales-order/penjelasan-detail-order-lines.html"><strong aria-hidden="true">1.1.1.1.</strong> Penjelasan Detail Order Lines</a></li></ol></li><li><a href="../../transaksi/sales-order/membuat.html"><strong aria-hidden="true">1.1.2.</strong> Membuat Sales Order</a></li><li><a href="../../transaksi/sales-order/modifikasi.html"><strong aria-hidden="true">1.1.3.</strong> Memodifikasi Sales Order</a></li><li><a href="../../transaksi/sales-order/menghapus.html"><strong aria-hidden="true">1.1.4.</strong> Menghapus Sales Order</a></li><li><a href="../../transaksi/sales-order/membuat-line.html"><strong aria-hidden="true">1.1.5.</strong> Membuat Sales Order Line</a></li><li><a href="../../transaksi/sales-order/modifikasi-line.html"><strong aria-hidden="true">1.1.6.</strong> Memodifikasi Sales Order Line</a></li><li><a href="../../transaksi/sales-order/menghapus-line.html"><strong aria-hidden="true">1.1.7.</strong> Menghapus Sales Order Line</a></li><li><a href="../../transaksi/sales-order/kirim-email.html" class="active"><strong aria-hidden="true">1.1.8.</strong> Mengirimkan Sales Order Via Email</a></li><li><a href="../../transaksi/sales-order/konfirmasi.html"><strong aria-hidden="true">1.1.9.</strong> Mengkonfirmasi Sales Order</a></li><li><a href="../../transaksi/sales-order/batal.html"><strong aria-hidden="true">1.1.10.</strong> Membatalkan Sales Order</a></li><li><a href="../../transaksi/sales-order/restart.html"><strong aria-hidden="true">1.1.11.</strong> Merestart Sales Order</a></li></ol></li><li><a href="../../transaksi/opportunity.html"><strong aria-hidden="true">1.2.</strong> Opportunity</a></li><li><ol class="section"><li><a href="../../transaksi/opportunity/penjelasan.html"><strong aria-hidden="true">1.2.1.</strong> Penjelasan</a></li><li><a href="../../transaksi/opportunity/membuat.html"><strong aria-hidden="true">1.2.2.</strong> Membuat Opportunity</a></li><li><a href="../../transaksi/opportunity/memodifikasi.html"><strong aria-hidden="true">1.2.3.</strong> Memodifikasi Opportunity</a></li><li><a href="../../transaksi/opportunity/menghapus.html"><strong aria-hidden="true">1.2.4.</strong> Menghapus Opportunity</a></li><li><a href="../../transaksi/opportunity/memindahkan-stage.html"><strong aria-hidden="true">1.2.5.</strong> Memindahkan Stage Opportunity</a></li><li><a href="../../transaksi/opportunity/membuat-quotation.html"><strong aria-hidden="true">1.2.6.</strong> Membuat Quotation Dari Opportunity</a></li><li><a href="../../transaksi/opportunity/menandai-menang.html"><strong aria-hidden="true">1.2.7.</strong> Menandai Opportunity Sebagai Menang</a></li><li><a href="../../transaksi/opportunity/menandai-kalah.html"><strong aria-hidden="true">1.2.8.</strong> Menandai Opportunity Sebagai Kalah</a></li><li><a href="../../transaksi/opportunity/membuat-master-project.html"><strong aria-hidden="true">1.2.9.</strong> Membuat Master Project Dari Opportunity</a></li></ol></li></ol></li><li><a href="../../konfigurasi.html"><strong aria-hidden="true">2.</strong> Konfigurasi</a></li><li><ol class="section"><li><a href="../../konfigurasi/sales-order-type.html"><strong aria-hidden="true">2.1.</strong> Sales Order Type</a></li><li><ol class="section"><li><a href="../../konfigurasi/sales-order-type/penjelasan.html"><strong aria-hidden="true">2.1.1.</strong> Penjelasan Sales Order Type</a></li><li><a href="../../konfigurasi/sales-order-type/membuat.html"><strong aria-hidden="true">2.1.2.</strong> Membuat Sales Order Type</a></li></ol></li><li><a href="../../konfigurasi/sales-order-cancel-reason.html"><strong aria-hidden="true">2.2.</strong> Sales Order Cancel Reason</a></li><li><ol class="section"><li><a href="../../konfigurasi/sales-order-cancel-reason/penjelasan.html"><strong aria-hidden="true">2.2.1.</strong> Penjelasan Sales Order Cancel Reason</a></li><li><a href="../../konfigurasi/sales-order-cancel-reason/membuat.html"><strong aria-hidden="true">2.2.2.</strong> Membuat Sales Order Cancel Reason</a></li></ol></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Odoo - Sales Management</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#mengirimkan-sales-order-via-email" id="mengirimkan-sales-order-via-email"><h1>Mengirimkan Sales Order Via Email</h1></a>
+<a class="header" href="#a-input" id="a-input"><h2>A. INPUT</h2></a>
+<ul>
+<li>Data sales order yang akan dikirim via email harus memiliki status <strong>Draft Quotation</strong>.</li>
+</ul>
+<p><img src="../../img/sales-order/status-draft-quotation.png" alt="" /></p>
+<ul>
+<li>User yang akan mengirim via email harus memiliki akses untuk mengirim via email sales order.</li>
+</ul>
+<a class="header" href="#b-langkah-kerja" id="b-langkah-kerja"><h2>B. LANGKAH KERJA</h2></a>
+<ol>
+<li>Buka menu <strong>Sales -&gt; Sales -&gt; All Orders</strong>. Abaikan jika sudah berada
+pada menu yang dimaksud.</li>
+<li>Buka data sales order yang akan dikirim via email. Abaikan jika data sudah dibuka.</li>
+<li>Klik tombol <strong>Send Quotation</strong> pada bagian atas-kiri form.</li>
+</ol>
+<p><img src="../../img/sales-order/tombol-send.png" alt="" /></p>
+<p>Pop-up <strong>Compose Email</strong> akan muncul</p>
+<p><img src="../../img/sales-order/pop-up-send-quotation.png" alt="" /></p>
+<ol start="4">
+<li>Sesuaikan isi email jika dibutuhkan</li>
+<li>Klik tombol <strong>Send</strong> pada bagian bawah-kiri pop-up <strong>Compose Email</strong></li>
+</ol>
+<p><img src="../../img/sales-order/tombol-send-email.png" alt="" /></p>
+<a class="header" href="#c-output" id="c-output"><h2>C. OUTPUT</h2></a>
+<ul>
+<li>Status dari sales order akan berubah menjadi <strong>Quotation Sent</strong></li>
+</ul>
+<p><img src="../../img/sales-order/status-quotation-sent.png" alt="" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../transaksi/sales-order/menghapus-line.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../transaksi/sales-order/konfirmasi.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../../transaksi/sales-order/menghapus-line.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../../transaksi/sales-order/konfirmasi.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
