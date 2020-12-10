@@ -1,9 +1,11 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js">
+<html lang="en" class="sidebar-visible no-js light">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Penjelasan Detail Order Lines - Odoo - Sales Management</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,11 +32,11 @@
 
         
     </head>
-    <body class="light">
+    <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "../../";
-            var default_theme = "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -56,10 +58,13 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            document.body.className = theme;
-            document.querySelector('html').className = theme + ' js';
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
@@ -75,44 +80,46 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="../../prakata.html">Pra-Kata</a></li><li class="affix"><a href="../../terminologi.html">Terminologi</a></li><li><a href="../../transaksi.html"><strong aria-hidden="true">1.</strong> Transaksi</a></li><li><ol class="section"><li><a href="../../transaksi/sales-order.html"><strong aria-hidden="true">1.1.</strong> Sales Order</a></li><li><ol class="section"><li><a href="../../transaksi/sales-order/penjelasan.html"><strong aria-hidden="true">1.1.1.</strong> Penjelasan</a></li><li><ol class="section"><li><a href="../../transaksi/sales-order/penjelasan-detail-order-lines.html" class="active"><strong aria-hidden="true">1.1.1.1.</strong> Penjelasan Detail Order Lines</a></li></ol></li><li><a href="../../transaksi/sales-order/membuat.html"><strong aria-hidden="true">1.1.2.</strong> Membuat Sales Order</a></li><li><a href="../../transaksi/sales-order/modifikasi.html"><strong aria-hidden="true">1.1.3.</strong> Memodifikasi Sales Order</a></li><li><a href="../../transaksi/sales-order/menghapus.html"><strong aria-hidden="true">1.1.4.</strong> Menghapus Sales Order</a></li><li><a href="../../transaksi/sales-order/membuat-line.html"><strong aria-hidden="true">1.1.5.</strong> Membuat Sales Order Line</a></li><li><a href="../../transaksi/sales-order/modifikasi-line.html"><strong aria-hidden="true">1.1.6.</strong> Memodifikasi Sales Order Line</a></li><li><a href="../../transaksi/sales-order/menghapus-line.html"><strong aria-hidden="true">1.1.7.</strong> Menghapus Sales Order Line</a></li><li><a href="../../transaksi/sales-order/kirim-email.html"><strong aria-hidden="true">1.1.8.</strong> Mengirimkan Sales Order Via Email</a></li><li><a href="../../transaksi/sales-order/konfirmasi.html"><strong aria-hidden="true">1.1.9.</strong> Mengkonfirmasi Sales Order</a></li><li><a href="../../transaksi/sales-order/batal.html"><strong aria-hidden="true">1.1.10.</strong> Membatalkan Sales Order</a></li><li><a href="../../transaksi/sales-order/restart.html"><strong aria-hidden="true">1.1.11.</strong> Merestart Sales Order</a></li></ol></li><li><a href="../../transaksi/opportunity.html"><strong aria-hidden="true">1.2.</strong> Opportunity</a></li><li><ol class="section"><li><a href="../../transaksi/opportunity/penjelasan.html"><strong aria-hidden="true">1.2.1.</strong> Penjelasan</a></li><li><a href="../../transaksi/opportunity/membuat.html"><strong aria-hidden="true">1.2.2.</strong> Membuat Opportunity</a></li><li><a href="../../transaksi/opportunity/memodifikasi.html"><strong aria-hidden="true">1.2.3.</strong> Memodifikasi Opportunity</a></li><li><a href="../../transaksi/opportunity/menghapus.html"><strong aria-hidden="true">1.2.4.</strong> Menghapus Opportunity</a></li><li><a href="../../transaksi/opportunity/memindahkan-stage.html"><strong aria-hidden="true">1.2.5.</strong> Memindahkan Stage Opportunity</a></li><li><a href="../../transaksi/opportunity/membuat-quotation.html"><strong aria-hidden="true">1.2.6.</strong> Membuat Quotation Dari Opportunity</a></li><li><a href="../../transaksi/opportunity/menandai-menang.html"><strong aria-hidden="true">1.2.7.</strong> Menandai Opportunity Sebagai Menang</a></li><li><a href="../../transaksi/opportunity/menandai-kalah.html"><strong aria-hidden="true">1.2.8.</strong> Menandai Opportunity Sebagai Kalah</a></li><li><a href="../../transaksi/opportunity/membuat-master-project.html"><strong aria-hidden="true">1.2.9.</strong> Membuat Master Project Dari Opportunity</a></li></ol></li></ol></li><li><a href="../../konfigurasi.html"><strong aria-hidden="true">2.</strong> Konfigurasi</a></li><li><ol class="section"><li><a href="../../konfigurasi/sales-order-type.html"><strong aria-hidden="true">2.1.</strong> Sales Order Type</a></li><li><ol class="section"><li><a href="../../konfigurasi/sales-order-type/penjelasan.html"><strong aria-hidden="true">2.1.1.</strong> Penjelasan Sales Order Type</a></li><li><a href="../../konfigurasi/sales-order-type/membuat.html"><strong aria-hidden="true">2.1.2.</strong> Membuat Sales Order Type</a></li></ol></li><li><a href="../../konfigurasi/sales-order-cancel-reason.html"><strong aria-hidden="true">2.2.</strong> Sales Order Cancel Reason</a></li><li><ol class="section"><li><a href="../../konfigurasi/sales-order-cancel-reason/penjelasan.html"><strong aria-hidden="true">2.2.1.</strong> Penjelasan Sales Order Cancel Reason</a></li><li><a href="../../konfigurasi/sales-order-cancel-reason/membuat.html"><strong aria-hidden="true">2.2.2.</strong> Membuat Sales Order Cancel Reason</a></li></ol></li></ol></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../prakata.html">Pra-Kata</a></li><li class="chapter-item expanded affix "><a href="../../terminologi.html">Terminologi</a></li><li class="chapter-item expanded "><a href="../../transaksi.html"><strong aria-hidden="true">1.</strong> Transaksi</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../transaksi/sales-order.html"><strong aria-hidden="true">1.1.</strong> Sales Order</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../transaksi/sales-order/penjelasan.html"><strong aria-hidden="true">1.1.1.</strong> Penjelasan</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../transaksi/sales-order/penjelasan-detail-order-lines.html" class="active"><strong aria-hidden="true">1.1.1.1.</strong> Penjelasan Detail Order Lines</a></li></ol></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/membuat.html"><strong aria-hidden="true">1.1.2.</strong> Membuat Sales Order</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/modifikasi.html"><strong aria-hidden="true">1.1.3.</strong> Memodifikasi Sales Order</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/menghapus.html"><strong aria-hidden="true">1.1.4.</strong> Menghapus Sales Order</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/membuat-line.html"><strong aria-hidden="true">1.1.5.</strong> Membuat Sales Order Line</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/modifikasi-line.html"><strong aria-hidden="true">1.1.6.</strong> Memodifikasi Sales Order Line</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/menghapus-line.html"><strong aria-hidden="true">1.1.7.</strong> Menghapus Sales Order Line</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/kirim-email.html"><strong aria-hidden="true">1.1.8.</strong> Mengirimkan Sales Order Via Email</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/konfirmasi.html"><strong aria-hidden="true">1.1.9.</strong> Mengkonfirmasi Sales Order</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/batal.html"><strong aria-hidden="true">1.1.10.</strong> Membatalkan Sales Order</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/restart.html"><strong aria-hidden="true">1.1.11.</strong> Merestart Sales Order</a></li></ol></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity.html"><strong aria-hidden="true">1.2.</strong> Opportunity</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../transaksi/opportunity/penjelasan.html"><strong aria-hidden="true">1.2.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/membuat.html"><strong aria-hidden="true">1.2.2.</strong> Membuat Opportunity</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/memodifikasi.html"><strong aria-hidden="true">1.2.3.</strong> Memodifikasi Opportunity</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/menghapus.html"><strong aria-hidden="true">1.2.4.</strong> Menghapus Opportunity</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/memindahkan-stage.html"><strong aria-hidden="true">1.2.5.</strong> Memindahkan Stage Opportunity</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/membuat-quotation.html"><strong aria-hidden="true">1.2.6.</strong> Membuat Quotation Dari Opportunity</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/menandai-menang.html"><strong aria-hidden="true">1.2.7.</strong> Menandai Opportunity Sebagai Menang</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/menandai-kalah.html"><strong aria-hidden="true">1.2.8.</strong> Menandai Opportunity Sebagai Kalah</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/membuat-master-project.html"><strong aria-hidden="true">1.2.9.</strong> Membuat Master Project Dari Opportunity</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi.html"><strong aria-hidden="true">2.</strong> Konfigurasi</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/sales-order-type.html"><strong aria-hidden="true">2.1.</strong> Sales Order Type</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/sales-order-type/penjelasan.html"><strong aria-hidden="true">2.1.1.</strong> Penjelasan Sales Order Type</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/sales-order-type/membuat.html"><strong aria-hidden="true">2.1.2.</strong> Membuat Sales Order Type</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/sales-order-cancel-reason.html"><strong aria-hidden="true">2.2.</strong> Sales Order Cancel Reason</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/sales-order-cancel-reason/penjelasan.html"><strong aria-hidden="true">2.2.1.</strong> Penjelasan Sales Order Cancel Reason</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/sales-order-cancel-reason/membuat.html"><strong aria-hidden="true">2.2.2.</strong> Membuat Sales Order Cancel Reason</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
                 
-                <div id="menu-bar" class="menu-bar">
-                    <div id="menu-bar-sticky-container">
-                        <div class="left-buttons">
-                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                                <i class="fa fa-bars"></i>
-                            </button>
-                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                                <i class="fa fa-paint-brush"></i>
-                            </button>
-                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                            </ul>
-                            
-                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            
-                        </div>
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
 
-                        <h1 class="menu-title">Odoo - Sales Management</h1> 
+                    <h1 class="menu-title">Odoo - Sales Management</h1>
 
-                        <div class="right-buttons">
-                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
-                                <i id="print-button" class="fa fa-print"></i>
-                            </a>
-                            
-                        </div>
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
                     </div>
                 </div>
 
@@ -140,50 +147,50 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#penjelasan-detail-order-lines" id="penjelasan-detail-order-lines"><h1>Penjelasan Detail Order Lines</h1></a>
-<a class="header" href="#a-namepenjelasan-detaildetail-order-linesa" id="a-namepenjelasan-detaildetail-order-linesa"><h2><a name="penjelasan-detail">Detail Order Lines</a></h2></a>
+                        <h1><a class="header" href="#penjelasan-detail-order-lines" id="penjelasan-detail-order-lines">Penjelasan Detail Order Lines</a></h1>
+<h2><a class="header" href="#a-namepenjelasan-detaildetail-order-linesa" id="a-namepenjelasan-detaildetail-order-linesa"><a name="penjelasan-detail">Detail Order Lines</a></a></h2>
 <p><img src="../../img/sales-order/detail-sale-order-lines.png" alt="" /></p>
-<a class="header" href="#a-namefield-productproducta" id="a-namefield-productproducta"><h4><a name="field-product">Product</a></h4></a>
+<h4><a class="header" href="#a-namefield-productproducta" id="a-namefield-productproducta"><a name="field-product">Product</a></a></h4>
 <p>Mendefinisikan produk</p>
-<a class="header" href="#a-namefield-lotlota" id="a-namefield-lotlota"><h4><a name="field-lot">Lot</a></h4></a>
+<h4><a class="header" href="#a-namefield-lotlota" id="a-namefield-lotlota"><a name="field-lot">Lot</a></a></h4>
 <p>Mendefinisikan Lot</p>
-<a class="header" href="#a-namefield-quantityquantitya" id="a-namefield-quantityquantitya"><h4><a name="field-quantity">Quantity</a></h4></a>
+<h4><a class="header" href="#a-namefield-quantityquantitya" id="a-namefield-quantityquantitya"><a name="field-quantity">Quantity</a></a></h4>
 <p>Menentukan jumlah barang dan satuan yang akan dipesan</p>
-<a class="header" href="#a-namefield-quantity-uosquantityuosa" id="a-namefield-quantity-uosquantityuosa"><h4><a name="field-quantity-Uos">Quantity(UoS)</a></h4></a>
+<h4><a class="header" href="#a-namefield-quantity-uosquantityuosa" id="a-namefield-quantity-uosquantityuosa"><a name="field-quantity-Uos">Quantity(UoS)</a></a></h4>
 <p>Menentukan jumlah barang dan satuan kedua yang akan dipesan</p>
-<a class="header" href="#a-namefield-source-warehousesource-warehousea" id="a-namefield-source-warehousesource-warehousea"><h4><a name="field-source-warehouse">Source Warehouse</a></h4></a>
+<h4><a class="header" href="#a-namefield-source-warehousesource-warehousea" id="a-namefield-source-warehousesource-warehousea"><a name="field-source-warehouse">Source Warehouse</a></a></h4>
 <p>Mendefinisikan gudang yang akan mengeluarkan barang</p>
-<a class="header" href="#a-namefield-routeroutea" id="a-namefield-routeroutea"><h4><a name="field-route">Route</a></h4></a>
+<h4><a class="header" href="#a-namefield-routeroutea" id="a-namefield-routeroutea"><a name="field-route">Route</a></a></h4>
 <p>Mendefinisikan rute pengiriman barang</p>
-<a class="header" href="#a-namefield-packagingpackaginga" id="a-namefield-packagingpackaginga"><h4><a name="field-packaging">Packaging</a></h4></a>
+<h4><a class="header" href="#a-namefield-packagingpackaginga" id="a-namefield-packagingpackaginga"><a name="field-packaging">Packaging</a></a></h4>
 <p>Mendefinisikan kemasan produk</p>
-<a class="header" href="#a-namefield-taxestaxesa" id="a-namefield-taxestaxesa"><h4><a name="field-taxes">Taxes</a></h4></a>
+<h4><a class="header" href="#a-namefield-taxestaxesa" id="a-namefield-taxestaxesa"><a name="field-taxes">Taxes</a></a></h4>
 <p>Mendefinisikan pajak yang akan dikenakan pada produk</p>
-<a class="header" href="#a-namefield-deliv-lead-timedelivery-lead-timea" id="a-namefield-deliv-lead-timedelivery-lead-timea"><h4><a name="field-deliv-lead-time">Delivery Lead Time</a></h4></a>
+<h4><a class="header" href="#a-namefield-deliv-lead-timedelivery-lead-timea" id="a-namefield-deliv-lead-timedelivery-lead-timea"><a name="field-deliv-lead-time">Delivery Lead Time</a></a></h4>
 <p>Mendefinisikan waktu pengiriman barang</p>
-<a class="header" href="#a-namefield-request-daterequested-datea" id="a-namefield-request-daterequested-datea"><h4><a name="field-request-date">Requested Date</a></h4></a>
+<h4><a class="header" href="#a-namefield-request-daterequested-datea" id="a-namefield-request-daterequested-datea"><a name="field-request-date">Requested Date</a></a></h4>
 <p>Mendefinisikan tanggal permintaan barang</p>
-<a class="header" href="#a-namefield-weightweighta" id="a-namefield-weightweighta"><h4><a name="field-weight">Weight</a></h4></a>
+<h4><a class="header" href="#a-namefield-weightweighta" id="a-namefield-weightweighta"><a name="field-weight">Weight</a></a></h4>
 <p>Menentukan berat dari produk</p>
-<a class="header" href="#a-namefield-package-weightpackage-weighta" id="a-namefield-package-weightpackage-weighta"><h4><a name="field-package-weight">Package Weight</a></h4></a>
+<h4><a class="header" href="#a-namefield-package-weightpackage-weighta" id="a-namefield-package-weightpackage-weighta"><a name="field-package-weight">Package Weight</a></a></h4>
 <p>Menentukan berat dari kemasan produk</p>
-<a class="header" href="#a-namefield-allotment-partnerallotment-partnera" id="a-namefield-allotment-partnerallotment-partnera"><h4><a name="field-allotment-partner">Allotment Partner</a></h4></a>
+<h4><a class="header" href="#a-namefield-allotment-partnerallotment-partnera" id="a-namefield-allotment-partnerallotment-partnera"><a name="field-allotment-partner">Allotment Partner</a></a></h4>
 <p>#TODO</p>
-<a class="header" href="#a-namefield-package-pricepackage-pricea" id="a-namefield-package-pricepackage-pricea"><h4><a name="field-package-price">Package Price</a></h4></a>
+<h4><a class="header" href="#a-namefield-package-pricepackage-pricea" id="a-namefield-package-pricepackage-pricea"><a name="field-package-price">Package Price</a></a></h4>
 <p>Menginformasikan harga kemasan</p>
-<a class="header" href="#a-namefield-unit-priceunit-pricea" id="a-namefield-unit-priceunit-pricea"><h4><a name="field-unit-price">Unit Price</a></h4></a>
+<h4><a class="header" href="#a-namefield-unit-priceunit-pricea" id="a-namefield-unit-priceunit-pricea"><a name="field-unit-price">Unit Price</a></a></h4>
 <p>Menginformasikan harga satuan produk</p>
-<a class="header" href="#a-namefield-can-change-pricecan-change-pricea" id="a-namefield-can-change-pricecan-change-pricea"><h4><a name="field-can-change-price">Can Change Price</a></h4></a>
+<h4><a class="header" href="#a-namefield-can-change-pricecan-change-pricea" id="a-namefield-can-change-pricecan-change-pricea"><a name="field-can-change-price">Can Change Price</a></a></h4>
 <p>Disii otomatis oleh Odoo. Jika aktif, maka user yang membuka data dapat melakukan perubahan harga produk</p>
-<a class="header" href="#a-namefield-discountdiscounta" id="a-namefield-discountdiscounta"><h4><a name="field-discount">Discount(%)</a></h4></a>
+<h4><a class="header" href="#a-namefield-discountdiscounta" id="a-namefield-discountdiscounta"><a name="field-discount">Discount(%)</a></a></h4>
 <p>Mendefinisikan persentase diskon yang akan diberikan</p>
-<a class="header" href="#a-namefield-description-produkdescriptiona" id="a-namefield-description-produkdescriptiona"><h4><a name="field-description-produk">Description</a></h4></a>
+<h4><a class="header" href="#a-namefield-description-produkdescriptiona" id="a-namefield-description-produkdescriptiona"><a name="field-description-produk">Description</a></a></h4>
 <p>Mendefinisikan deskripsi produk</p>
-<a class="header" href="#a-namefield-manually-sourcedmanually-sourceda" id="a-namefield-manually-sourcedmanually-sourceda"><h4><a name="field-manually-sourced">Manually Sourced</a></h4></a>
+<h4><a class="header" href="#a-namefield-manually-sourcedmanually-sourceda" id="a-namefield-manually-sourcedmanually-sourceda"><a name="field-manually-sourced">Manually Sourced</a></a></h4>
 <p>#TODO</p>
-<a class="header" href="#a-namefield-sourced-bysourced-bya" id="a-namefield-sourced-bysourced-bya"><h4><a name="field-sourced-by">Sourced By</a></h4></a>
+<h4><a class="header" href="#a-namefield-sourced-bysourced-bya" id="a-namefield-sourced-bysourced-bya"><a name="field-sourced-by">Sourced By</a></a></h4>
 <p>#TODO</p>
-<a class="header" href="#a-namefield-invoice-linesinvoice-linesa" id="a-namefield-invoice-linesinvoice-linesa"><h4><a name="field-invoice-lines">Invoice Lines</a></h4></a>
+<h4><a class="header" href="#a-namefield-invoice-linesinvoice-linesa" id="a-namefield-invoice-linesinvoice-linesa"><a name="field-invoice-lines">Invoice Lines</a></a></h4>
 <p>#TODO</p>
 
                     </main>
@@ -209,13 +216,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="../../transaksi/sales-order/penjelasan.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../transaksi/sales-order/penjelasan.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="../../transaksi/sales-order/membuat.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../../transaksi/sales-order/membuat.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -225,6 +232,14 @@
 
         
 
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
         
 
         

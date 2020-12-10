@@ -1,9 +1,11 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js">
+<html lang="en" class="sidebar-visible no-js light">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Penjelasan - Odoo - Sales Management</title>
+        
+
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,11 +32,11 @@
 
         
     </head>
-    <body class="light">
+    <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "../../";
-            var default_theme = "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -56,10 +58,13 @@
         <!-- Set the theme before any content is loaded, prevents flash -->
         <script type="text/javascript">
             var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            document.body.className = theme;
-            document.querySelector('html').className = theme + ' js';
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
@@ -75,44 +80,46 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <ol class="chapter"><li class="affix"><a href="../../prakata.html">Pra-Kata</a></li><li class="affix"><a href="../../terminologi.html">Terminologi</a></li><li><a href="../../transaksi.html"><strong aria-hidden="true">1.</strong> Transaksi</a></li><li><ol class="section"><li><a href="../../transaksi/sales-order.html"><strong aria-hidden="true">1.1.</strong> Sales Order</a></li><li><ol class="section"><li><a href="../../transaksi/sales-order/penjelasan.html" class="active"><strong aria-hidden="true">1.1.1.</strong> Penjelasan</a></li><li><ol class="section"><li><a href="../../transaksi/sales-order/penjelasan-detail-order-lines.html"><strong aria-hidden="true">1.1.1.1.</strong> Penjelasan Detail Order Lines</a></li></ol></li><li><a href="../../transaksi/sales-order/membuat.html"><strong aria-hidden="true">1.1.2.</strong> Membuat Sales Order</a></li><li><a href="../../transaksi/sales-order/modifikasi.html"><strong aria-hidden="true">1.1.3.</strong> Memodifikasi Sales Order</a></li><li><a href="../../transaksi/sales-order/menghapus.html"><strong aria-hidden="true">1.1.4.</strong> Menghapus Sales Order</a></li><li><a href="../../transaksi/sales-order/membuat-line.html"><strong aria-hidden="true">1.1.5.</strong> Membuat Sales Order Line</a></li><li><a href="../../transaksi/sales-order/modifikasi-line.html"><strong aria-hidden="true">1.1.6.</strong> Memodifikasi Sales Order Line</a></li><li><a href="../../transaksi/sales-order/menghapus-line.html"><strong aria-hidden="true">1.1.7.</strong> Menghapus Sales Order Line</a></li><li><a href="../../transaksi/sales-order/kirim-email.html"><strong aria-hidden="true">1.1.8.</strong> Mengirimkan Sales Order Via Email</a></li><li><a href="../../transaksi/sales-order/konfirmasi.html"><strong aria-hidden="true">1.1.9.</strong> Mengkonfirmasi Sales Order</a></li><li><a href="../../transaksi/sales-order/batal.html"><strong aria-hidden="true">1.1.10.</strong> Membatalkan Sales Order</a></li><li><a href="../../transaksi/sales-order/restart.html"><strong aria-hidden="true">1.1.11.</strong> Merestart Sales Order</a></li></ol></li><li><a href="../../transaksi/opportunity.html"><strong aria-hidden="true">1.2.</strong> Opportunity</a></li><li><ol class="section"><li><a href="../../transaksi/opportunity/penjelasan.html"><strong aria-hidden="true">1.2.1.</strong> Penjelasan</a></li><li><a href="../../transaksi/opportunity/membuat.html"><strong aria-hidden="true">1.2.2.</strong> Membuat Opportunity</a></li><li><a href="../../transaksi/opportunity/memodifikasi.html"><strong aria-hidden="true">1.2.3.</strong> Memodifikasi Opportunity</a></li><li><a href="../../transaksi/opportunity/menghapus.html"><strong aria-hidden="true">1.2.4.</strong> Menghapus Opportunity</a></li><li><a href="../../transaksi/opportunity/memindahkan-stage.html"><strong aria-hidden="true">1.2.5.</strong> Memindahkan Stage Opportunity</a></li><li><a href="../../transaksi/opportunity/membuat-quotation.html"><strong aria-hidden="true">1.2.6.</strong> Membuat Quotation Dari Opportunity</a></li><li><a href="../../transaksi/opportunity/menandai-menang.html"><strong aria-hidden="true">1.2.7.</strong> Menandai Opportunity Sebagai Menang</a></li><li><a href="../../transaksi/opportunity/menandai-kalah.html"><strong aria-hidden="true">1.2.8.</strong> Menandai Opportunity Sebagai Kalah</a></li><li><a href="../../transaksi/opportunity/membuat-master-project.html"><strong aria-hidden="true">1.2.9.</strong> Membuat Master Project Dari Opportunity</a></li></ol></li></ol></li><li><a href="../../konfigurasi.html"><strong aria-hidden="true">2.</strong> Konfigurasi</a></li><li><ol class="section"><li><a href="../../konfigurasi/sales-order-type.html"><strong aria-hidden="true">2.1.</strong> Sales Order Type</a></li><li><ol class="section"><li><a href="../../konfigurasi/sales-order-type/penjelasan.html"><strong aria-hidden="true">2.1.1.</strong> Penjelasan Sales Order Type</a></li><li><a href="../../konfigurasi/sales-order-type/membuat.html"><strong aria-hidden="true">2.1.2.</strong> Membuat Sales Order Type</a></li></ol></li><li><a href="../../konfigurasi/sales-order-cancel-reason.html"><strong aria-hidden="true">2.2.</strong> Sales Order Cancel Reason</a></li><li><ol class="section"><li><a href="../../konfigurasi/sales-order-cancel-reason/penjelasan.html"><strong aria-hidden="true">2.2.1.</strong> Penjelasan Sales Order Cancel Reason</a></li><li><a href="../../konfigurasi/sales-order-cancel-reason/membuat.html"><strong aria-hidden="true">2.2.2.</strong> Membuat Sales Order Cancel Reason</a></li></ol></li></ol></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../prakata.html">Pra-Kata</a></li><li class="chapter-item expanded affix "><a href="../../terminologi.html">Terminologi</a></li><li class="chapter-item expanded "><a href="../../transaksi.html"><strong aria-hidden="true">1.</strong> Transaksi</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../transaksi/sales-order.html"><strong aria-hidden="true">1.1.</strong> Sales Order</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../transaksi/sales-order/penjelasan.html" class="active"><strong aria-hidden="true">1.1.1.</strong> Penjelasan</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../transaksi/sales-order/penjelasan-detail-order-lines.html"><strong aria-hidden="true">1.1.1.1.</strong> Penjelasan Detail Order Lines</a></li></ol></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/membuat.html"><strong aria-hidden="true">1.1.2.</strong> Membuat Sales Order</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/modifikasi.html"><strong aria-hidden="true">1.1.3.</strong> Memodifikasi Sales Order</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/menghapus.html"><strong aria-hidden="true">1.1.4.</strong> Menghapus Sales Order</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/membuat-line.html"><strong aria-hidden="true">1.1.5.</strong> Membuat Sales Order Line</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/modifikasi-line.html"><strong aria-hidden="true">1.1.6.</strong> Memodifikasi Sales Order Line</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/menghapus-line.html"><strong aria-hidden="true">1.1.7.</strong> Menghapus Sales Order Line</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/kirim-email.html"><strong aria-hidden="true">1.1.8.</strong> Mengirimkan Sales Order Via Email</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/konfirmasi.html"><strong aria-hidden="true">1.1.9.</strong> Mengkonfirmasi Sales Order</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/batal.html"><strong aria-hidden="true">1.1.10.</strong> Membatalkan Sales Order</a></li><li class="chapter-item expanded "><a href="../../transaksi/sales-order/restart.html"><strong aria-hidden="true">1.1.11.</strong> Merestart Sales Order</a></li></ol></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity.html"><strong aria-hidden="true">1.2.</strong> Opportunity</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../transaksi/opportunity/penjelasan.html"><strong aria-hidden="true">1.2.1.</strong> Penjelasan</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/membuat.html"><strong aria-hidden="true">1.2.2.</strong> Membuat Opportunity</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/memodifikasi.html"><strong aria-hidden="true">1.2.3.</strong> Memodifikasi Opportunity</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/menghapus.html"><strong aria-hidden="true">1.2.4.</strong> Menghapus Opportunity</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/memindahkan-stage.html"><strong aria-hidden="true">1.2.5.</strong> Memindahkan Stage Opportunity</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/membuat-quotation.html"><strong aria-hidden="true">1.2.6.</strong> Membuat Quotation Dari Opportunity</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/menandai-menang.html"><strong aria-hidden="true">1.2.7.</strong> Menandai Opportunity Sebagai Menang</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/menandai-kalah.html"><strong aria-hidden="true">1.2.8.</strong> Menandai Opportunity Sebagai Kalah</a></li><li class="chapter-item expanded "><a href="../../transaksi/opportunity/membuat-master-project.html"><strong aria-hidden="true">1.2.9.</strong> Membuat Master Project Dari Opportunity</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi.html"><strong aria-hidden="true">2.</strong> Konfigurasi</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/sales-order-type.html"><strong aria-hidden="true">2.1.</strong> Sales Order Type</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/sales-order-type/penjelasan.html"><strong aria-hidden="true">2.1.1.</strong> Penjelasan Sales Order Type</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/sales-order-type/membuat.html"><strong aria-hidden="true">2.1.2.</strong> Membuat Sales Order Type</a></li></ol></li><li class="chapter-item expanded "><a href="../../konfigurasi/sales-order-cancel-reason.html"><strong aria-hidden="true">2.2.</strong> Sales Order Cancel Reason</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../konfigurasi/sales-order-cancel-reason/penjelasan.html"><strong aria-hidden="true">2.2.1.</strong> Penjelasan Sales Order Cancel Reason</a></li><li class="chapter-item expanded "><a href="../../konfigurasi/sales-order-cancel-reason/membuat.html"><strong aria-hidden="true">2.2.2.</strong> Membuat Sales Order Cancel Reason</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
                 
-                <div id="menu-bar" class="menu-bar">
-                    <div id="menu-bar-sticky-container">
-                        <div class="left-buttons">
-                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                                <i class="fa fa-bars"></i>
-                            </button>
-                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                                <i class="fa fa-paint-brush"></i>
-                            </button>
-                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                            </ul>
-                            
-                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            
-                        </div>
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
 
-                        <h1 class="menu-title">Odoo - Sales Management</h1> 
+                    <h1 class="menu-title">Odoo - Sales Management</h1>
 
-                        <div class="right-buttons">
-                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
-                                <i id="print-button" class="fa fa-print"></i>
-                            </a>
-                            
-                        </div>
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
                     </div>
                 </div>
 
@@ -140,7 +147,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <a class="header" href="#penjelasan" id="penjelasan"><h1>Penjelasan</h1></a>
+                        <h1><a class="header" href="#penjelasan" id="penjelasan">Penjelasan</a></h1>
 <ul>
 <li><a href="#header">Header</a></li>
 <li><a href="#tab-order-lines">Tab Order Lines</a></li>
@@ -148,54 +155,54 @@
 <li><a href="#tab-revision">Tab Revision</a></li>
 <li><a href="#tab-policy">Tab Policy</a></li>
 </ul>
-<a class="header" href="#a-nameheaderheadera" id="a-nameheaderheadera"><h2><a name="header">HEADER</a></h2></a>
+<h2><a class="header" href="#a-nameheaderheadera" id="a-nameheaderheadera"><a name="header">HEADER</a></a></h2>
 <p><img src="../../img/sales-order/penjelasan-header.png" alt="" /></p>
-<a class="header" href="#a-namefield-number-orderquotation-a" id="a-namefield-number-orderquotation-a"><h4><a name="field-number"># Order(<em>Quotation /</em>)</a></h4></a>
+<h4><a class="header" href="#a-namefield-number-orderquotation-a" id="a-namefield-number-orderquotation-a"><a name="field-number"># Order(<em>Quotation /</em>)</a></a></h4>
 <p>Mendefinisikan nomor <em>Sales Order</em>. Penomoran akan diisi otomatis oleh odoo ketika data disimpan</p>
-<a class="header" href="#a-namefield-customercustomera" id="a-namefield-customercustomera"><h4><a name="field-customer">Customer</a></h4></a>
+<h4><a class="header" href="#a-namefield-customercustomera" id="a-namefield-customercustomera"><a name="field-customer">Customer</a></a></h4>
 <p>Mendefinisikan konsumen</p>
-<a class="header" href="#a-namefield-invoice-addressinvoice-addressa" id="a-namefield-invoice-addressinvoice-addressa"><h4><a name="field-invoice-address">Invoice Address</a></h4></a>
+<h4><a class="header" href="#a-namefield-invoice-addressinvoice-addressa" id="a-namefield-invoice-addressinvoice-addressa"><a name="field-invoice-address">Invoice Address</a></a></h4>
 <p>Mendefinisikan alamat konsumen yang akan dijadikan sebagai tujuan pengiriman <em>Invoice</em></p>
-<a class="header" href="#a-namefield-consigneeconsigneea" id="a-namefield-consigneeconsigneea"><h4><a name="field-consignee">Consignee</a></h4></a>
+<h4><a class="header" href="#a-namefield-consigneeconsigneea" id="a-namefield-consigneeconsigneea"><a name="field-consignee">Consignee</a></a></h4>
 <p>Mendefinisikan orang yang akan menerima barang</p>
-<a class="header" href="#a-namefield-delivery-addressdelivery-addressa" id="a-namefield-delivery-addressdelivery-addressa"><h4><a name="field-delivery-address">Delivery Address</a></h4></a>
+<h4><a class="header" href="#a-namefield-delivery-addressdelivery-addressa" id="a-namefield-delivery-addressdelivery-addressa"><a name="field-delivery-address">Delivery Address</a></a></h4>
 <p>Mendefinisikan alamat konsumen yang akan dijadikan sebagai tujuan pengiriman barang</p>
-<a class="header" href="#a-namefield-analyticcontract--analytica" id="a-namefield-analyticcontract--analytica"><h4><a name="field-analytic">Contract / Analytic</a></h4></a>
+<h4><a class="header" href="#a-namefield-analyticcontract--analytica" id="a-namefield-analyticcontract--analytica"><a name="field-analytic">Contract / Analytic</a></a></h4>
 <p>Mendefinisikan kontrak atau akun analitik terkait <em>Sales Order</em></p>
-<a class="header" href="#a-namefield-datedatea" id="a-namefield-datedatea"><h4><a name="field-date">Date</a></h4></a>
+<h4><a class="header" href="#a-namefield-datedatea" id="a-namefield-datedatea"><a name="field-date">Date</a></a></h4>
 <p>Mendefinisikan tanggal <em>Sales Order</em></p>
-<a class="header" href="#a-namefield-validvalid-untila" id="a-namefield-validvalid-untila"><h4><a name="field-valid">Valid Until</a></h4></a>
+<h4><a class="header" href="#a-namefield-validvalid-untila" id="a-namefield-validvalid-untila"><a name="field-valid">Valid Until</a></a></h4>
 <p>Mendefinisikan tanggal masa berlaku habisnya <em>Sales Order</em></p>
-<a class="header" href="#a-namefield-ref-descreferencedescriptiona" id="a-namefield-ref-descreferencedescriptiona"><h4><a name="field-ref-desc">Reference/Description</a></h4></a>
+<h4><a class="header" href="#a-namefield-ref-descreferencedescriptiona" id="a-namefield-ref-descreferencedescriptiona"><a name="field-ref-desc">Reference/Description</a></a></h4>
 <p>Nomor referensi atau deskripsi terkait <em>Sales Order</em></p>
-<a class="header" href="#a-namefield-warehousedefault-warehousea" id="a-namefield-warehousedefault-warehousea"><h4><a name="field-warehouse">Default Warehouse</a></h4></a>
+<h4><a class="header" href="#a-namefield-warehousedefault-warehousea" id="a-namefield-warehousedefault-warehousea"><a name="field-warehouse">Default Warehouse</a></a></h4>
 <p>Mendefinisikan gudang yang akan mengeluarkan barang</p>
-<a class="header" href="#a-namefield-pricelistpricelista" id="a-namefield-pricelistpricelista"><h4><a name="field-pricelist">Pricelist</a></h4></a>
+<h4><a class="header" href="#a-namefield-pricelistpricelista" id="a-namefield-pricelistpricelista"><a name="field-pricelist">Pricelist</a></a></h4>
 <p>Mendefinisikan <em>Pricelist</em></p>
-<a class="header" href="#a-namefield-typetypea" id="a-namefield-typetypea"><h4><a name="field-type">Type</a></h4></a>
+<h4><a class="header" href="#a-namefield-typetypea" id="a-namefield-typetypea"><a name="field-type">Type</a></a></h4>
 <p>Mendefinisikan tipe <em>Sales Order</em></p>
-<a class="header" href="#a-nametab-order-linestab-order-linesa" id="a-nametab-order-linestab-order-linesa"><h2><a name="tab-order-lines">TAB ORDER LINES</a></h2></a>
+<h2><a class="header" href="#a-nametab-order-linestab-order-linesa" id="a-nametab-order-linestab-order-linesa"><a name="tab-order-lines">TAB ORDER LINES</a></a></h2>
 <p><img src="../../img/sales-order/penjelasan-tab-order-lines.png" alt="" /></p>
 <p>Penjelasan lengkap mengenai detail <em>Order Lines</em> diatas dapat dilihat pada dokumentasi <strong><a href="./penjelasan-detail-order-lines.html">Penjelasan Detail Order Lines</a></strong></p>
 <p><img src="../../img/sales-order/penjelasan-tab-order-lines-2.png" alt="" /></p>
-<a class="header" href="#a-namefield-delivery-methoddelivery-methoda" id="a-namefield-delivery-methoddelivery-methoda"><h4><a name="field-delivery-method">Delivery Method</a></h4></a>
+<h4><a class="header" href="#a-namefield-delivery-methoddelivery-methoda" id="a-namefield-delivery-methoddelivery-methoda"><a name="field-delivery-method">Delivery Method</a></a></h4>
 <p>Metode pengiriman yang akan digunakan</p>
-<a class="header" href="#a-namefield-term-conditionterms-and-conditionsa" id="a-namefield-term-conditionterms-and-conditionsa"><h4><a name="field-term-condition">Terms and conditions</a></h4></a>
+<h4><a class="header" href="#a-namefield-term-conditionterms-and-conditionsa" id="a-namefield-term-conditionterms-and-conditionsa"><a name="field-term-condition">Terms and conditions</a></a></h4>
 <p>Mendefinisikan syarat dan ketentuan yang berlaku terkait <em>Sales Order</em></p>
-<a class="header" href="#a-nametab-other-informationtab-other-informationa" id="a-nametab-other-informationtab-other-informationa"><h2><a name="tab-other-information">TAB OTHER INFORMATION</a></h2></a>
+<h2><a class="header" href="#a-nametab-other-informationtab-other-informationa" id="a-nametab-other-informationtab-other-informationa"><a name="tab-other-information">TAB OTHER INFORMATION</a></a></h2>
 <p><img src="../../img/sales-order/penjelasan-tab-other-information-1.png" alt="" /></p>
-<a class="header" href="#a-namefield-incotermincoterma" id="a-namefield-incotermincoterma"><h4><a name="field-incoterm">Incoterm</a></h4></a>
+<h4><a class="header" href="#a-namefield-incotermincoterma" id="a-namefield-incotermincoterma"><a name="field-incoterm">Incoterm</a></a></h4>
 <blockquote>
 <p><strong>Catatan:</strong> (Inggris: <em>International Commercial Terms</em> number disingkat Incoterm)</p>
 </blockquote>
 <p>Mendefinisikan <em>Incoterm</em> terkait <em>Sales Order</em></p>
-<a class="header" href="#a-namefield-shipping-policyshipping-policya" id="a-namefield-shipping-policyshipping-policya"><h4><a name="field-shipping-policy">Shipping Policy</a></h4></a>
+<h4><a class="header" href="#a-namefield-shipping-policyshipping-policya" id="a-namefield-shipping-policyshipping-policya"><a name="field-shipping-policy">Shipping Policy</a></a></h4>
 <p>Medefiniskan kebijakan pengiriman barang. Pilihan ini terbagi atas 2 pilihan, yaitu: <br/></p>
 <ul>
 <li><strong>Deliver each product when available</strong></li>
 <li><strong>Deliver all product at once</strong></li>
 </ul>
-<a class="header" href="#a-namefield-create-invoicecreate-invoicea" id="a-namefield-create-invoicecreate-invoicea"><h4><a name="field-create-invoice">Create Invoice</a></h4></a>
+<h4><a class="header" href="#a-namefield-create-invoicecreate-invoicea" id="a-namefield-create-invoicecreate-invoicea"><a name="field-create-invoice">Create Invoice</a></a></h4>
 <p>Medefiniskan pembuatan <em>Invoice</em>. Pilihan ini terbagi atas 3 pilihan, yaitu: <br/></p>
 <ul>
 <li><strong>On Demand:</strong> Invoice akan dibuat berdasarkan permintaan</li>
@@ -203,74 +210,74 @@
 <li><strong>Before Delivery:</strong> Invoice akan dibuat sebelum pengiriman</li>
 </ul>
 <p><img src="../../img/sales-order/penjelasan-tab-other-information-2.png" alt="" /></p>
-<a class="header" href="#a-namefield-salespersonsalespersona" id="a-namefield-salespersonsalespersona"><h4><a name="field-salesperson">Salesperson</a></h4></a>
+<h4><a class="header" href="#a-namefield-salespersonsalespersona" id="a-namefield-salespersonsalespersona"><a name="field-salesperson">Salesperson</a></a></h4>
 <p>Mendefinisikan <em>Sales Person</em></p>
-<a class="header" href="#a-namefield-tagstagsa" id="a-namefield-tagstagsa"><h4><a name="field-tags">Tags</a></h4></a>
+<h4><a class="header" href="#a-namefield-tagstagsa" id="a-namefield-tagstagsa"><a name="field-tags">Tags</a></a></h4>
 <p>#TODO</p>
-<a class="header" href="#a-namefield-operating-unitoperating-unita" id="a-namefield-operating-unitoperating-unita"><h4><a name="field-operating-unit">Operating Unit</a></h4></a>
+<h4><a class="header" href="#a-namefield-operating-unitoperating-unita" id="a-namefield-operating-unitoperating-unita"><a name="field-operating-unit">Operating Unit</a></a></h4>
 <blockquote>
 <p><strong>Catatan:</strong> Isian ini hanya untuk user yang memiliki group <strong>Multi Operating Unit</strong></p>
 </blockquote>
 <p>Mendefinisikan operating unit untuk <em>Sales Order</em>.</p>
-<a class="header" href="#a-namefield-sales-teamsales-teama" id="a-namefield-sales-teamsales-teama"><h4><a name="field-sales-team">Sales Team</a></h4></a>
+<h4><a class="header" href="#a-namefield-sales-teamsales-teama" id="a-namefield-sales-teamsales-teama"><a name="field-sales-team">Sales Team</a></a></h4>
 <p>Mendefinisikan <em>Sales Team</em></p>
-<a class="header" href="#a-namefield-source-documentsource-documenta" id="a-namefield-source-documentsource-documenta"><h4><a name="field-source-document">Source Document</a></h4></a>
+<h4><a class="header" href="#a-namefield-source-documentsource-documenta" id="a-namefield-source-documentsource-documenta"><a name="field-source-document">Source Document</a></a></h4>
 <p>Mendefinisikan dokumen terkait <em>Sales Order</em></p>
-<a class="header" href="#a-namefield-campaigncampaigna" id="a-namefield-campaigncampaigna"><h4><a name="field-campaign">Campaign</a></h4></a>
+<h4><a class="header" href="#a-namefield-campaigncampaigna" id="a-namefield-campaigncampaigna"><a name="field-campaign">Campaign</a></a></h4>
 <p>#TODO</p>
-<a class="header" href="#a-namefield-channelchannela" id="a-namefield-channelchannela"><h4><a name="field-channel">Channel</a></h4></a>
+<h4><a class="header" href="#a-namefield-channelchannela" id="a-namefield-channelchannela"><a name="field-channel">Channel</a></a></h4>
 <p>#TODO</p>
-<a class="header" href="#a-namefield-sourcesourcea" id="a-namefield-sourcesourcea"><h4><a name="field-source">Source</a></h4></a>
+<h4><a class="header" href="#a-namefield-sourcesourcea" id="a-namefield-sourcesourcea"><a name="field-source">Source</a></a></h4>
 <p>#TODO</p>
 <p><img src="../../img/sales-order/penjelasan-tab-other-information-3.png" alt="" /></p>
-<a class="header" href="#a-namefield-payment-termpayment-terma" id="a-namefield-payment-termpayment-terma"><h4><a name="field-payment-term">Payment Term</a></h4></a>
+<h4><a class="header" href="#a-namefield-payment-termpayment-terma" id="a-namefield-payment-termpayment-terma"><a name="field-payment-term">Payment Term</a></a></h4>
 <p>Mendefinisikan ketentuan pembayaran</p>
-<a class="header" href="#a-namefield-fiscal-positionfiscal-positiona" id="a-namefield-fiscal-positionfiscal-positiona"><h4><a name="field-fiscal-position">Fiscal Position</a></h4></a>
+<h4><a class="header" href="#a-namefield-fiscal-positionfiscal-positiona" id="a-namefield-fiscal-positionfiscal-positiona"><a name="field-fiscal-position">Fiscal Position</a></a></h4>
 <p>#TODO</p>
-<a class="header" href="#a-namefield-invoice-amountinvoice-amounta" id="a-namefield-invoice-amountinvoice-amounta"><h4><a name="field-invoice-amount">Invoice Amount</a></h4></a>
+<h4><a class="header" href="#a-namefield-invoice-amountinvoice-amounta" id="a-namefield-invoice-amountinvoice-amounta"><a name="field-invoice-amount">Invoice Amount</a></a></h4>
 <p>Menginformasikan total harga <em>Invoice</em></p>
-<a class="header" href="#a-namefield-invoice-pending-amountinvoice-pending-amounta" id="a-namefield-invoice-pending-amountinvoice-pending-amounta"><h4><a name="field-invoice-pending-amount">Invoice Pending Amount</a></h4></a>
+<h4><a class="header" href="#a-namefield-invoice-pending-amountinvoice-pending-amounta" id="a-namefield-invoice-pending-amountinvoice-pending-amounta"><a name="field-invoice-pending-amount">Invoice Pending Amount</a></a></h4>
 <p>Menginformasikan total harga <em>Invoice</em> yang tertunda</p>
-<a class="header" href="#a-namefield-companycompanya" id="a-namefield-companycompanya"><h4><a name="field-company">Company</a></h4></a>
+<h4><a class="header" href="#a-namefield-companycompanya" id="a-namefield-companycompanya"><a name="field-company">Company</a></a></h4>
 <p>Mendefinisikan perusahaan</p>
 <p><img src="../../img/sales-order/penjelasan-tab-other-information-4.png" alt="" /></p>
-<a class="header" href="#a-namefield-requested-date-otherrequested-datea" id="a-namefield-requested-date-otherrequested-datea"><h4><a name="field-requested-date-other">Requested Date</a></h4></a>
+<h4><a class="header" href="#a-namefield-requested-date-otherrequested-datea" id="a-namefield-requested-date-otherrequested-datea"><a name="field-requested-date-other">Requested Date</a></a></h4>
 <p>Mendefinisikan tanggal permintaan <em>Sales Order</em></p>
-<a class="header" href="#a-namefield-commitment-date-othercommitment-datea" id="a-namefield-commitment-date-othercommitment-datea"><h4><a name="field-commitment-date-other">Commitment Date</a></h4></a>
+<h4><a class="header" href="#a-namefield-commitment-date-othercommitment-datea" id="a-namefield-commitment-date-othercommitment-datea"><a name="field-commitment-date-other">Commitment Date</a></a></h4>
 <p>Mendefinisikan tanggal komitmen <em>Sales Order</em></p>
-<a class="header" href="#a-namefield-efective-date-otherefective-datea" id="a-namefield-efective-date-otherefective-datea"><h4><a name="field-efective-date-other">Efective Date</a></h4></a>
+<h4><a class="header" href="#a-namefield-efective-date-otherefective-datea" id="a-namefield-efective-date-otherefective-datea"><a name="field-efective-date-other">Efective Date</a></a></h4>
 <p>Mendefinisikan tanggal efektif <em>Sales Order</em></p>
 <p><img src="../../img/sales-order/penjelasan-tab-other-information-5.png" alt="" /></p>
-<a class="header" href="#a-namefield-paidpaida" id="a-namefield-paidpaida"><h4><a name="field-paid">Paid</a></h4></a>
+<h4><a class="header" href="#a-namefield-paidpaida" id="a-namefield-paidpaida"><a name="field-paid">Paid</a></a></h4>
 <p>Menginformasikan status pembayaran <em>Sales Order</em>. Jika dicentang, maka <em>Sales Order</em> sudah dibayar lunas</p>
-<a class="header" href="#a-namefield-delivereddelivereda" id="a-namefield-delivereddelivereda"><h4><a name="field-delivered">Delivered</a></h4></a>
+<h4><a class="header" href="#a-namefield-delivereddelivereda" id="a-namefield-delivereddelivereda"><a name="field-delivered">Delivered</a></a></h4>
 <p>Menginformasikan status pengiriman <em>Sales Order</em>. Jika dicentang, maka produk sudah dikirim dan diterima oleh konsumen</p>
 <p><img src="../../img/sales-order/penjelasan-tab-other-information-6.png" alt="" /></p>
-<a class="header" href="#a-namefield-exceptionexceptiona" id="a-namefield-exceptionexceptiona"><h4><a name="field-exception">Exception</a></h4></a>
+<h4><a class="header" href="#a-namefield-exceptionexceptiona" id="a-namefield-exceptionexceptiona"><a name="field-exception">Exception</a></a></h4>
 <p>#TODO</p>
-<a class="header" href="#a-nametab-revisiontab-revisiona" id="a-nametab-revisiontab-revisiona"><h2><a name="tab-revision">TAB REVISION</a></h2></a>
+<h2><a class="header" href="#a-nametab-revisiontab-revisiona" id="a-nametab-revisiontab-revisiona"><a name="tab-revision">TAB REVISION</a></a></h2>
 <p><img src="../../img/sales-order/penjelasan-tab-revision.png" alt="" /></p>
-<a class="header" href="#a-namefield-revisionsrevisionsa" id="a-namefield-revisionsrevisionsa"><h4><a name="field-revisions">Revisions</a></h4></a>
+<h4><a class="header" href="#a-namefield-revisionsrevisionsa" id="a-namefield-revisionsrevisionsa"><a name="field-revisions">Revisions</a></a></h4>
 <p>#TODO</p>
-<a class="header" href="#a-nametab-policytab-policya" id="a-nametab-policytab-policya"><h2><a name="tab-policy">TAB POLICY</a></h2></a>
+<h2><a class="header" href="#a-nametab-policytab-policya" id="a-nametab-policytab-policya"><a name="tab-policy">TAB POLICY</a></a></h2>
 <p><img src="../../img/sales-order/penjelasan-tab-policy.png" alt="" /></p>
-<a class="header" href="#a-namefield-can-recreate-invoicecan-recreate-invoicea" id="a-namefield-can-recreate-invoicecan-recreate-invoicea"><h4><a name="field-can-recreate-invoice">Can Recreate Invoice</a></h4></a>
+<h4><a class="header" href="#a-namefield-can-recreate-invoicecan-recreate-invoicea" id="a-namefield-can-recreate-invoicecan-recreate-invoicea"><a name="field-can-recreate-invoice">Can Recreate Invoice</a></a></h4>
 <p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang membuka data <em>Sales Order</em> dapat membuat ulang invoice</p>
-<a class="header" href="#a-namefield-can-ignore-exceptioncan-ignore-exceptiona" id="a-namefield-can-ignore-exceptioncan-ignore-exceptiona"><h4><a name="field-can-ignore-exception">Can Ignore Exception</a></h4></a>
+<h4><a class="header" href="#a-namefield-can-ignore-exceptioncan-ignore-exceptiona" id="a-namefield-can-ignore-exceptioncan-ignore-exceptiona"><a name="field-can-ignore-exception">Can Ignore Exception</a></a></h4>
 <p>#TODO</p>
-<a class="header" href="#a-namefield-can-send-by-emailcan-send-by-emaila" id="a-namefield-can-send-by-emailcan-send-by-emaila"><h4><a name="field-can-send-by-email">Can Send by Email</a></h4></a>
+<h4><a class="header" href="#a-namefield-can-send-by-emailcan-send-by-emaila" id="a-namefield-can-send-by-emailcan-send-by-emaila"><a name="field-can-send-by-email">Can Send by Email</a></a></h4>
 <p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang membuka data <em>Sales Order</em> dapat megirim dokumen <em>Sales Order</em> melalui email</p>
-<a class="header" href="#a-namefield-change-can-confirmcan-confirm-salea" id="a-namefield-change-can-confirmcan-confirm-salea"><h4><a name="field-change-can-confirm">Can Confirm Sale</a></h4></a>
+<h4><a class="header" href="#a-namefield-change-can-confirmcan-confirm-salea" id="a-namefield-change-can-confirmcan-confirm-salea"><a name="field-change-can-confirm">Can Confirm Sale</a></a></h4>
 <p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang membuka data <em>Sales Order</em> dapat melakukan <a href="./konfirmasi.html">Mengkonfirmasi Sales Order</a>.</p>
-<a class="header" href="#a-namefield-can-view-invoicecan-view-invoicea" id="a-namefield-can-view-invoicecan-view-invoicea"><h4><a name="field-can-view-invoice">Can View Invoice</a></h4></a>
+<h4><a class="header" href="#a-namefield-can-view-invoicecan-view-invoicea" id="a-namefield-can-view-invoicecan-view-invoicea"><a name="field-can-view-invoice">Can View Invoice</a></a></h4>
 <p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang membuka data <em>Sales Order</em> dapat melihat <em>Invoice</em></p>
-<a class="header" href="#a-namefield-can-create-invoicecan-create-invoicea" id="a-namefield-can-create-invoicecan-create-invoicea"><h4><a name="field-can-create-invoice">Can Create Invoice</a></h4></a>
+<h4><a class="header" href="#a-namefield-can-create-invoicecan-create-invoicea" id="a-namefield-can-create-invoicecan-create-invoicea"><a name="field-can-create-invoice">Can Create Invoice</a></a></h4>
 <p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang membuka data <em>Sales Order</em> dapat membuat invoice</p>
-<a class="header" href="#a-namefield-can-new-copy-quotationcan-new-copy-of-quotationa" id="a-namefield-can-new-copy-quotationcan-new-copy-of-quotationa"><h4><a name="field-can-new-copy-quotation">Can New Copy of Quotation</a></h4></a>
+<h4><a class="header" href="#a-namefield-can-new-copy-quotationcan-new-copy-of-quotationa" id="a-namefield-can-new-copy-quotationcan-new-copy-of-quotationa"><a name="field-can-new-copy-quotation">Can New Copy of Quotation</a></a></h4>
 <p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang menyalin ulang data <em>Sales Order</em></p>
-<a class="header" href="#a-namefield-cancel-ordercan-cancel-ordera" id="a-namefield-cancel-ordercan-cancel-ordera"><h4><a name="field-cancel-order">Can Cancel Order</a></h4></a>
+<h4><a class="header" href="#a-namefield-cancel-ordercan-cancel-ordera" id="a-namefield-cancel-ordercan-cancel-ordera"><a name="field-cancel-order">Can Cancel Order</a></a></h4>
 <p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang membuka data <em>Sales Order</em> dapat melakukan <a href="./batal.html">Membatalkan Sales Order</a></p>
-<a class="header" href="#a-namefield-can-change-pricecan-change-pricea" id="a-namefield-can-change-pricecan-change-pricea"><h4><a name="field-can-change-price">Can Change Price</a></h4></a>
+<h4><a class="header" href="#a-namefield-can-change-pricecan-change-pricea" id="a-namefield-can-change-pricecan-change-pricea"><a name="field-can-change-price">Can Change Price</a></a></h4>
 <p>Diisi otomatis oleh Odoo. Jika aktif, maka user yang membuka data <em>Sales Order</em> dapat mengganti harga</p>
 
                     </main>
@@ -296,13 +303,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="../../transaksi/sales-order.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../transaksi/sales-order.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="../../transaksi/sales-order/penjelasan-detail-order-lines.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../../transaksi/sales-order/penjelasan-detail-order-lines.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -312,6 +319,14 @@
 
         
 
+        
+
+        
+        
+        
+        <script type="text/javascript">
+            window.playpen_copyable = true;
+        </script>
         
 
         
